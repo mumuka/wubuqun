@@ -1,0 +1,17 @@
+@import "mixins/size.less";
+@import "mixins/clearfix.less";
+@import "mixins/vendor-prefixes.less";
+.wbtn_style(@color,@bg,@border){
+	color:@color;
+	background-color: @bg;
+	border:1px solid @border;
+}
+.roundbtn(){
+	display: inline-block;
+	border-radius: 45%;
+	overflow: hidden;
+}
+.bb(@w,@h){
+	display: block;
+	.size(@w,@h)
+}

@@ -1,0 +1,134 @@
+//阴影
+.boxshadow{
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.fixbar{
+	background-color: #fff;
+	position: fixed;
+	left: 0px;
+	.size(100%,50px);
+	z-index: 99;
+}
+
+
+.wtopbar{
+	top: 0px;
+	&:extend(.fixbar all);
+	&:extend(.boxshadow);
+
+	.col-xs-10{
+		padding: 2px 10px 0 3px;
+		float: right;
+		position: relative;
+		.searchtext{
+			float: right;
+			border-radius: 10px;
+			border: 1px solid @color_main;
+			.size(100%,46px);
+		}
+		.wbtn{
+			border-top-left-radius:0px; 
+			border-bottom-left-radius:0px; 
+			position: absolute;
+			padding: 0 15px;
+			top: 2px;right: 10px;
+			.size(auto,46px);
+			line-height: 45px;
+		}
+	}
+	.col-xs-2{
+		padding: 2px 0px 0  5px;
+		float: left;
+		.bigicon{
+			height: 48px;
+			line-height: 48px;
+		}
+	}
+	.wbtn_round{
+		.square(45px);
+		text-align: center;
+		line-height: 45px;
+	}
+}
+
+.paixu{
+	height: 36px;
+	line-height: 36px;
+	width: 100%;
+	position: fixed;
+	top: 50px;
+	z-index: 2;
+	background-color: @gary_bar;
+	&:extend(.boxshadow);
+	.col-xs-3{
+		padding: 0;
+		text-align: center;
+		border-left:1px solid @gary_bg;
+		&:first-child{border: none;}	
+	}
+	.wlink{
+		display: block;
+		font-size: 14px;
+		.size(100%,36px);
+	}
+	.current{
+		font-weight: bold;
+		color:@color_red !important;
+	}
+}
+
+.footerbar{
+	bottom: 0px;
+	&:extend(.fixbar all);
+	&:extend(.boxshadow);
+	.col-xs-3{
+		padding: 0px;
+		text-align: center;
+		.wbtn{
+			.bb(100%;50px);
+			.navtext{
+				color:@color_title;
+				margin-top: -8px;
+				font-size: 10px;
+				line-height: 15px;
+				.bb(100%;20px);
+			}
+		}
+	}
+	.col-xs-2{
+		padding: 0px;
+		text-align: center;
+		border-right: 1px solid @color_title;
+		.wbtn{
+			border-radius: 0px;
+			.bb(100%;50px);
+			line-height: 50px;
+		}
+	}
+
+	.col-xs-10{
+		padding: 0px;
+		text-align: center;
+		.wbtn{
+			margin-top: 2px;
+			.size(auto;46px);
+			line-height:46px;
+		}
+	}
+	.current{
+		.iconfont,.wbtn .navtext{color:@color_red;}
+		.icon-b11{
+			&:before{content:"\e612";}
+		}
+		.icon-b51{
+			&:before{content:"\e611";}
+		}
+		.icon-b14{
+			&:before{content:"\e613";}
+		}
+		.icon-b24{
+			&:before{content:"\e614";}
+		}
+	}
+}

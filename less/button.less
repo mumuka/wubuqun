@@ -1,0 +1,169 @@
+
+
+//普通按钮
+.wbtn{
+	display: inline-block;
+	padding: 0 10px;
+	border-radius: 10px;
+	line-height: 40px;
+	.size(auto,40px);
+	.iconfont{
+		color:#fff;
+	}
+}
+
+//圆形按钮
+.wbtn_round{
+	.roundbtn();
+}
+
+
+.wbtn_bgicon{
+	text-align: center;
+	color:#fff;
+	.iconfont{
+		.square(inherit);
+		text-shadow:0 0 6px rgba(0, 0, 0, 0.2);
+	}
+}
+//标签
+.wbtn_tag{
+	.size(auto,16px);
+	float: left;
+	line-height: 15px;
+	border-radius: 3px;
+	font-size: 10px;
+	display: inline-block;
+	padding: 0 3px;
+	margin-right:3px;
+	.iconfont{
+		&:extend(.miniicon);
+		text-shadow:none;
+		margin-right: 2px;
+	}
+}
+
+.wbtn_fly{
+	position: absolute;
+}
+.wbtn_flybr{
+	border-top-left-radius:5px;
+	border-bottom-right-radius:5px; 
+	bottom: 0px;
+	right: 0px;
+}
+
+//按钮颜色
+.wbtn_title{
+	.wbtn_style(#fff,@color_title,@color_title);
+	&:extend(.wbtn_bgicon all);
+}
+
+.wbtn_main{
+	.wbtn_style(#fff,@color_main,@color_main);
+	&:extend(.wbtn_bgicon all);
+}
+
+.wbtn_green{
+	.wbtn_style(#fff,@color_green,@color_green);
+	&:extend(.wbtn_bgicon all);
+}
+
+.wbtn_orange{
+	.wbtn_style(#fff,@color_orange,@color_orange);
+	&:extend(.wbtn_bgicon all);
+}
+
+.wbtn_yellow{
+	.wbtn_style(#fff,@color_yellow,@color_yellow);
+	&:extend(.wbtn_bgicon all);
+}
+
+.wbtn_red{
+	.wbtn_style(#fff,@color_red,@color_red);
+	&:extend(.wbtn_bgicon all);
+}
+
+.wbtn_purplered{
+	.wbtn_style(#fff,@color_purplered,@color_purplered);
+	&:extend(.wbtn_bgicon all);
+}
+
+.wbtn_greenblue{
+	.wbtn_style(#fff,@color_greenblue,@color_greenblue);
+	&:extend(.wbtn_bgicon all);
+}
+
+.wbtn_greenyellow{
+	.wbtn_style(#fff,@color_greenyellow,@color_greenyellow);
+	&:extend(.wbtn_bgicon all);
+}
+
+
+
+//按钮icon颜色
+.wbtn_line_main{
+	color:@color_main;
+	.iconfont{
+		color:@color_main;
+		text-shadow:none;
+	}
+}
+
+.wbtn_line_green{
+	color:@color_green;
+	.iconfont{
+		color:@color_green;
+		text-shadow:none;
+	}
+}
+
+.wbtn_line_orange{
+	color:@color_orange;
+	.iconfont{
+		color:@color_orange;
+		text-shadow:none;
+	}
+}
+
+.wbtn_line_yellow{
+	color:@color_yellow;
+	.iconfont{
+		color:@color_yellow;
+		text-shadow:none;
+	}
+}
+
+.wbtn_line_red{
+	color:@color_red;
+	.iconfont{
+		color:@color_red;
+		text-shadow:none;
+	}
+}
+
+.wbtn_line_purplered{
+	color:@color_purplered;
+	.iconfont{
+		color:@color_purplered;
+		text-shadow:none;
+	}
+}
+
+.wbtn_line_greenblue{
+	color:@color_greenblue;
+	.iconfont{
+		color:@color_greenblue;
+		text-shadow:none;
+	}
+}
+
+.wbtn_line_greenyellow{
+	color:@color_greenyellow;
+	.iconfont{
+		color:@color_greenyellow;
+		text-shadow:none;
+	}
+}
+
+

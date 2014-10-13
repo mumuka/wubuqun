@@ -1,0 +1,38 @@
+.clearfix{
+	.clearfix()
+}
+
+
+//撑开页面
+.top86:before{
+    content: " "; // 1
+    display: table; // 2
+	visibility: hidden;
+	.size(100%,86px);
+}
+.bottom50:after{
+    content: " "; // 1
+    display: table; // 2
+	visibility: hidden;
+	.size(100%,50px);
+}
+
+//默认链接
+.wlink{
+	text-decoration: none ;
+	&:link,&:visited{
+		color:@color_main;
+	}
+	&:hover,&:active{
+		color:@color_red;
+		text-decoration: none;
+	}
+}
+a{
+	&:extend(.wlink all);
+}
+
+.iconfont{font-size: 24px;}
+.bigicon{font-size: 30px;}
+.smallicon{font-size: 18px;}
+.miniicon{font-size: 12px;}
