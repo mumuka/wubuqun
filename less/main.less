@@ -2,71 +2,135 @@ body{
 	background-color: @main-bgcolor;
 }
 
-
-.mainlist{
+.teacherheader{
+	.size(100%,145px);
+	.clearfix();
 	padding: 10px;
-	background-color: @gary_bg;
+	.col-xs-4{
+		padding: 0px;
+		text-align: center;
+		height:90px;
+		.touxiang{
+			.square(90px);
+			img{
+				.square(inherit)
+			}
+		}
+		.teachertag{
+			.size(70%,30px);
+			text-align: right;
+			line-height: 30px;
+			padding: 0 5px;
+			margin-top: 10px;
+			&:first-child{margin-top: 20px;}
+			.iconfont{
+				.size(20%,30px);
+				line-height: 30px;
+				font-size:18px;
+				float: left;
+				text-align: center;
+			}
+		}
+		.teacherpraise{
+			margin-top: 30px;
+			.size(60px,60px);
+			text-align: center;
+			padding: 0px;
+			line-height: 10px;
+			.iconfont{
+				font-size: 20px;
+				display: inline-block;
+				height: 40px;
+				line-height: 40px;
+			}
+		}
+
+	}
+	.teachername{
+		.bb(100%,40px);
+		font-size: 20px;
+		color:@color_main;
+		text-align: center;
+		line-height: 40px;
+		font-weight: bold;
+	}
+}
+
+
+
+.teacherinfotagbox{
+	.size(100%,45px);
+}
+.teacherinfotag{
+	background-color: @color_main;
 	position: relative;
-	.size(100%,auto);
-	.listbox{
-		background-color: #fff;
-		margin-bottom: 10px;
-		padding: 6px 10px;
-		border-radius: 5px;
+	&:extend(.teacherinfotagbox);
+	.col-xs-4{
 		position: relative;
+		z-index: 1;
+		color:#fff;
+		line-height: 45px;
+		height: 45px;
+		.iconfont{
+			font-weight: normal;
+			margin-right: 10px;
+		}
+		.transition(0.3s ease-out);
+	}
+	.changebar{
+		top: 0px;
+		left: 0px;
+		position: absolute;
+		z-index: 0;
+		.transition(0.3s ease-out);
+	}
+	.change0{
+		background-color: @color_green;
+	}
+	.change1{
+		background-color: @color_yellow;
+	}
+	.change2{
+		background-color: @color_greenyellow;
+	}
+}
+
+
+
+.teacherpagetag{display: none}
+.teacherpagetagshow{display: block;}
+.teacherinfobox{
+	background-color: #fff;
+	padding: 10px;
+	.size(100%,auto);
+
+	.tagbox{
+		margin-bottom: 5px;
 		.clearfix();
 		.size(100%,auto);
-		&:extend(.boxshadow);
-		.touxiang{
-			float: left;
-			background-color: #ccc;
-			margin-top: 3px;
-			.square(60px);
-			margin-right: 10px;
-			img{width: 100%;}
-		}
-		
-
-		.textbox{
-			h3{
-				max-height: 20px;
-				font-size: 16px;
-				line-height: 20px;
-				margin: 0px;
-				color:@color_title;
-				font-weight: bold;
-				overflow: hidden;
-			}
-			p{
-				max-height: 42px;
-				overflow: hidden;
-				font-size: 14px;
-				line-height: 21px;
-				min-height: 42px;
-				color:@gary_text;
-			}
-		}
-
-		.tagbox{
-			.size(100%,16px);
-			.clearfix();
-			// background-color: #ccc;
-			margin-top: 6px;
-			padding-right: 80px;
-			overflow: hidden;
-		}
-		.consult{
-			font-size: 18px;
+		position: relative;
+		padding-left: 65px;
+		line-height: 24px;
+		.tagtitle{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			color:@color_title;
 			font-weight: bold;
-			.size(90px,44px);
-			line-height: 42px;
-			text-align: center;
 		}
-
-		.timetag{
-			.size(90px,22px);
-			font-size: 14px;
-			line-height: 22px;
+		.wbtn_tag{
+			margin:4px 3px;
 		}
 	}
+
+	.introduction{
+		font-size: 14px;
+		line-height: 20px;
+		color:@color_title;
+		strong{
+			font-size: 14px;
+			font-weight: bold;
+		}
+	}
+
 }

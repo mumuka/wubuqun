@@ -1,0 +1,71 @@
+//列表页主样式
+.mainlist{
+	padding: 10px;
+	background-color: @gary_bg;
+	position: relative;
+	.size(100%,auto);
+	.listbox{
+		background-color: #fff;
+		margin-bottom: 10px;
+		padding: 6px 10px;
+		border-radius: 5px;
+		position: relative;
+		.clearfix();
+		.bb(100%,auto);
+		&:extend(.boxshadow);
+		.touxiang{
+			float: left;
+			background-color: #ccc;
+			margin-top: 3px;
+			.square(60px);
+			margin-right: 10px;
+			img{width: 100%;}
+		}
+		
+
+		.textbox{
+			h3{
+				max-height: 20px;
+				font-size: 16px;
+				line-height: 20px;
+				margin: 0px;
+				color:@color_title;
+				font-weight: bold;
+				overflow: hidden;
+			}
+			.maxh3{
+				max-height: 40px;
+			}
+			p{
+				max-height: 42px;
+				overflow: hidden;
+				font-size: 14px;
+				line-height: 21px;
+				min-height: 42px;
+				color:@gary_text;
+			}
+		}
+
+		.tagbox{
+			.size(100%,16px);
+			.clearfix();
+			// background-color: #ccc;
+			margin-top: 6px;
+			padding-right: 80px;
+			overflow: hidden;
+		}
+		.consult{
+			font-size: 18px;
+			font-weight: bold;
+			.size(90px,44px);
+			line-height: 42px;
+			text-align: center;
+		}
+
+		.timetag{
+			.size(90px,22px);
+			font-size: 14px;
+			line-height: 22px;
+		}
+	}
+}
