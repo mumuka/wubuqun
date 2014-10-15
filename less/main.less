@@ -66,8 +66,8 @@ body{
 	position: relative;
 	&:extend(.teacherinfotagbox);
 	.col-xs-4{
-		position: relative;
-		z-index: 1;
+		// position: relative;
+		// z-index: 1;
 		color:#fff;
 		line-height: 45px;
 		height: 45px;
@@ -134,3 +134,100 @@ body{
 	}
 
 }
+
+.creatdiscuss_form{
+	width: 100%;
+	textarea{
+		.size(100%,auto);
+		border:none;
+		font-size: 14px;
+	}
+	.discuss_tagbox{
+		.size(100%,37px);
+		&:extend(.fixbar);
+		padding-top: 7px;
+		overflow: hidden;
+		bottom: 40px;
+		border-bottom: 1px solid #ccc;
+		border-top: 1px solid #ccc;
+	}
+	.checkbox{
+		.bb(1px,1px);
+		position: absolute;
+		top: -0px;
+		left: -100px;
+	}
+	label{
+		float: left;
+		margin-left: 10px;
+		line-height: 20px;
+		height: 20px;
+		color:@gary_text;
+		.wbtn{
+			margin-right: 2px;
+			line-height: 18px;
+			border-radius: 4px;
+			.square(18px);
+			padding: 0px;
+			.iconfont{
+				&:before{
+					content:"　";
+				}
+				display: block;
+				margin:2px auto;
+				font-size: 12px;
+				line-height: 12px;
+			}
+		}
+	}
+	.checkbox:checked+label{
+			color:@color_main;
+		.wbtn{
+			background-color: @color_main;
+			border-color:@color_main;
+			.iconfont{
+				&:before{
+					content: "\e622";
+				}
+			}
+		}
+	}//.checkbox:checked+label
+	.discuss_contral{
+		.size(100%,40px);
+		&:extend(.fixbar);
+		overflow: hidden;
+		bottom: 0px;
+		label{
+			margin-top: 10px;
+		}
+		.discuss_submit,.discuss_exit{
+			float: right;
+			margin-right: 10px;
+			margin-top: 2px;
+			line-height: 36px;
+			padding: 0 20px;
+			.size(auto,36px)
+		}
+	}//.discuss_contral
+}//.creatdiscuss_form
+
+.fixbox{
+	.square(100%);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 999;
+	background-color: #000;
+	.transition(0.5s ease-out);
+}
+
+.closethis{
+	z-index: -9;
+	transform:translate3d(0px,-10%,0px);
+	opacity:0;
+}
+
+// @-webkit-keyframes closethis{
+// 	0%{-webkit-transform:translate3d(0px,0px,0px);opacity: 1;}
+// 	100%{-webkit-transform:translate3d(0px,10%,0px);opacity: 0;}
+// }

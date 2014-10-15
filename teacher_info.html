@@ -8,7 +8,7 @@
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1413272586_8236315.css">
-	<link rel="stylesheet" href="css/wubu.css?v=0.0.4">
+	<link rel="stylesheet" href="css/wubu.css?v=0.0.7">
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -128,6 +128,46 @@
 </div><!-- mainlist -->
 
 
+<div class="fixbox closethis" id="creatdiscuss">
+	<form class="creatdiscuss_form" action="">
+		<textarea placeholder="请输入您要咨询的内容"  name="" id="" rows="2"></textarea>
+		<textarea class="secondtextarea" placeholder="详细描述" name="" id=""></textarea>
+		<div class="discuss_tagbox">
+			<input class="checkbox" type="checkbox" id="discusstag1">
+			<label for="discusstag1" class="discusstag">
+				<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
+			</label>
+			<input class="checkbox" type="checkbox" id="discusstag2">
+			<label for="discusstag2" class="discusstag">
+				<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
+			</label>
+			<input class="checkbox" type="checkbox" id="discusstag3">
+			<label for="discusstag3" class="discusstag">
+				<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
+			</label>
+			<input class="checkbox" type="checkbox" id="discusstag4">
+			<label for="discusstag4" class="discusstag">
+				<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
+			</label>
+		</div>
+		<div class="discuss_contral">
+			<input class="checkbox" type="checkbox" id="discusstag5">
+			<label for="discusstag5" class="discusstag">
+				<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>此话题不公开
+			</label>
+			<span class="wbtn wbtn_red discuss_submit">
+				提交
+			</span>
+			<span class="wbtn wbtn_main discuss_exit" id="discuss_exit">
+				取消
+			</span>
+		</div>
+	</form>
+</div>
+
+
+
+
 <div class="footerbar">
 	<div class="col-xs-2 ">
 		<a class="wbtn wbtn_main" type="button" href="#">
@@ -135,22 +175,20 @@
 		</a>
 	</div><!-- /.col-lg-2 -->
 	<div class="col-xs-10">
-		<a class="wbtn wbtn_line_main" type="button" href="#">
+		<span class="wbtn wbtn_line_main" id="askthisteacher">
 			<span class="iconfont icon-34 smallicon"></span>
 			咨询导师
-		</a>
+		</span>
 	</div><!-- /.col-lg-10 -->
 </div><!-- footerbar -->
-
 
 </body>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="js/teachertag.js?v=0.0.2"></script>
+<script src="js/fixbox.js?v=0.0.4"></script>
+<script src="js/teachertag.js?v=0.0.3"></script>
 <script>
-
-
 </script>
 </html>

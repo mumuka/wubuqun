@@ -1,4 +1,12 @@
 
+//导师详情页
+$("#askthisteacher").showfixbox("#discuss_exit");
+//安卓关闭时会打开键盘
+$(".secondtextarea").css({"height":$(window).height()-131})
+$("#discuss_exit").bind("touchstart",function(){
+	$("textarea").blur()
+})
+
 
 $(".teacherinfobox").css({"min-height":$(window).height()-190});
 $(".teacherinfotag").find(".col-xs-4").each(function(index){
@@ -15,3 +23,4 @@ $(".teacherinfotag").find(".col-xs-4").each(function(index){
 	})
 
 })
+
