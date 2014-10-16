@@ -222,7 +222,7 @@ body{
 }
 
 .closethis{
-	z-index: -9;
+	display: none;
 	transform:translate3d(0px,-10%,0px);
 	opacity:0;
 }
@@ -238,6 +238,19 @@ body{
 //话题详情
 .discusscontainer{
 	padding: 10px;
+	.title{
+		font-size: 14px;
+		color:@color_main;
+		font-weight: bold;
+	}
+	.description{
+		font-size: 14px;
+		color:@color_title;
+		line-height: 20px;
+		max-height: 60px;
+		overflow: hidden;
+	}
+
 	.bottombar{
 		font-size: 12px;
 		.size(100%,16px);
@@ -245,6 +258,7 @@ body{
 		text-align: center;
 		.time{
 			float: right;
+			color:@color_title;
 		}
 		.wbtn_tag{
 			float: left;
