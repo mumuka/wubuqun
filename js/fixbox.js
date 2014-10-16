@@ -3,11 +3,14 @@
 用法
 $("#askthisteacher").showfixbox("#discuss_exit");
 */
-$.fn.showfixbox = function (button) {
+$.fn.showfixbox = function (button,inputfocus) {
 	$(this).bind("touchend",function(e){
 		e.preventDefault()
 		$(".fixbox").removeClass("closethis");
 		$(".fixbox").css({"transform":"translate3d(0px,0%,0px)","opacity":"1"});
+		if(inputfocus){
+			$(inputfocus).focus()
+		}
 	});
 
 	$(button).bind("touchend",function(e){

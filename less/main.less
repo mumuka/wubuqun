@@ -143,12 +143,11 @@ body{
 		font-size: 14px;
 	}
 	.discuss_tagbox{
-		.size(100%,37px);
+		.size(100%,36px);
 		&:extend(.fixbar);
 		padding-top: 7px;
 		overflow: hidden;
 		bottom: 40px;
-		border-bottom: 1px solid #ccc;
 		border-top: 1px solid #ccc;
 	}
 	.checkbox{
@@ -193,7 +192,8 @@ body{
 		}
 	}//.checkbox:checked+label
 	.discuss_contral{
-		.size(100%,40px);
+		.size(100%,41px);
+		border-top: 1px solid #ccc;
 		&:extend(.fixbar);
 		overflow: hidden;
 		bottom: 0px;
@@ -231,3 +231,34 @@ body{
 // 	0%{-webkit-transform:translate3d(0px,0px,0px);opacity: 1;}
 // 	100%{-webkit-transform:translate3d(0px,10%,0px);opacity: 0;}
 // }
+
+
+
+
+//话题详情
+.discusscontainer{
+	padding: 10px;
+	.bottombar{
+		font-size: 12px;
+		.size(100%,16px);
+		.clearfix();
+		text-align: center;
+		.time{
+			float: right;
+		}
+		.wbtn_tag{
+			float: left;
+		}
+		.dropdownicon{
+			.square(16px);
+			display: inline-block;
+			.rotate(-90deg);
+			.transition(0.5s ease-out);
+			.iconfont{
+				font-size: 16px;
+				line-height: 16px;
+				color:@color_title;
+			}
+		}
+	}
+}

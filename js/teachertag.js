@@ -1,6 +1,6 @@
 
 //导师详情页
-$("#askthisteacher").showfixbox("#discuss_exit");
+$("#askthisteacher").showfixbox("#discuss_exit",".discusstitleinfo");
 //安卓关闭时会打开键盘
 $(".secondtextarea").css({"height":$(window).height()-131})
 $("#discuss_exit").bind("touchstart",function(){
