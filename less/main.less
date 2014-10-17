@@ -2,6 +2,8 @@ body{
 	background-color: @main-bgcolor;
 }
 
+
+//导师详情
 .teacherheader{
 	.size(100%,145px);
 	.clearfix();
@@ -363,4 +365,124 @@ body{
 			}
 		}//.answerinfo
 	}//.answerlist
+}
+
+
+//个人中心
+.mycenterheader{
+	background-color: #fff;
+	position: relative;
+	.bb(100%,80px);
+	.touxiang{
+		.square(60px);
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		img{
+			.square(60px);
+		}
+	}
+	.name{
+		.bb(100%,20px);
+		font-size: 14px;
+		line-height: 20px;
+		padding-left: 70px;
+		color: @color_title;
+		&:first-child{
+			margin-top: 12px;
+			font-size: 16px;
+			font-weight: bold;
+		}
+	}
+	.infoicon{
+		.square(24px);
+		position: absolute;
+		top: 22px;
+		right: 20px;
+	}
+}
+
+.hupenghuanyou{
+	text-align: center;
+	.wbtn{
+		height: 45px;
+		line-height: 43px;
+		padding: 0 20px;
+		position: relative;
+		.iconfont{
+			float: left;
+			margin-right: 5px;
+		}
+		.text{
+			float: left;
+			display: inline-block;
+			font-weight: bold;
+		}
+		.number{
+			position: absolute;
+			top: -1px;
+			right: -1px;
+			border-top-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+			font-size: 12px;
+			line-height: 12px;
+			.size(auto,14px);
+			padding: 0 3px;
+		}
+	}
+}
+
+.mycenterlist{
+	.listbox{
+		margin-bottom: 10px;
+		.bb(100%,50px);
+		line-height: 50px;
+		background-color: #fff;
+		padding: 0 10px;
+		clear: both;
+		&:active{
+			background-color: @gary_bg;
+		}
+		.listicon{
+			float: left;
+			margin-right: 5px;
+		}
+		.title{
+			float: left;
+			color: @color_title;
+			font-weight: bold;
+			font-size: 16px;
+		}
+		.righticon{
+			float: right;
+			.titleinfo{
+				color:@gary_c;
+				display: block;
+				float: left;
+			}
+			.wbtn_round{
+				.square(8px);
+				margin-top: 21px;
+			}
+			.goicon{
+				display: block;
+				float: right;
+				margin-left: 5px;
+				margin-right: 10px;
+				.rotate(180deg);
+				.iconfont{
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	.listgroup{
+		margin-bottom: 10px;
+		.listbox{
+			margin:0 0 1px 0;
+		}
+		.listbox:last-child{
+			margin: 0px;
+		}
+	}
 }
