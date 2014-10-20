@@ -52,6 +52,12 @@
 	bottom: 0px;
 	right: 0px;
 }
+.wbtn_flytr{
+	border-top-right-radius:5px;
+	border-bottom-left-radius:5px; 
+	top: 0px;
+	right: 0px;
+}
 
 //按钮颜色
 .wbtn_gary{
@@ -110,6 +116,32 @@
 
 .wbtn_greenyellow{
 	.wbtn_style(#fff,@color_greenyellow,@color_greenyellow);
+	&:extend(.wbtn_bgicon all);
+	&:link,&:visited,&:hover,&:active{color:#fff;}
+}
+
+.wbtn_lightyellow{
+	.wbtn_style(#fff,@color_lightyellow,@color_lightyellow);
+	&:extend(.wbtn_bgicon all);
+	&:link,&:visited,&:hover,&:active{color:#fff;}
+}
+.wbtn_lightblue{
+	.wbtn_style(#fff,@color_lightblue,@color_lightblue);
+	&:extend(.wbtn_bgicon all);
+	&:link,&:visited,&:hover,&:active{color:#fff;}
+}
+.wbtn_lightpurple{
+	.wbtn_style(#fff,@color_lightpurple,@color_lightpurple);
+	&:extend(.wbtn_bgicon all);
+	&:link,&:visited,&:hover,&:active{color:#fff;}
+}
+.wbtn_lightred{
+	.wbtn_style(#fff,@color_lightred,@color_lightred);
+	&:extend(.wbtn_bgicon all);
+	&:link,&:visited,&:hover,&:active{color:#fff;}
+}
+.wbtn_lightgreen{
+	.wbtn_style(#fff,@color_lightgreen,@color_lightgreen);
 	&:extend(.wbtn_bgicon all);
 	&:link,&:visited,&:hover,&:active{color:#fff;}
 }
@@ -182,3 +214,40 @@
 }
 
 
+
+
+.wbtn_line_lightyellow{
+	color:@color_lightyellow;
+	.iconfont{
+		color:@color_lightyellow;
+		text-shadow:none;
+	}
+}
+.wbtn_line_lightblue{
+	color:@color_lightblue;
+	.iconfont{
+		color:@color_lightblue;
+		text-shadow:none;
+	}
+}
+.wbtn_line_lightpurple{
+	color:@color_lightpurple;
+	.iconfont{
+		color:@color_lightpurple;
+		text-shadow:none;
+	}
+}
+.wbtn_line_lightred{
+	color:@color_lightred;
+	.iconfont{
+		color:@color_lightred;
+		text-shadow:none;
+	}
+}
+.wbtn_line_lightgreen{
+	color:@color_lightgreen;
+	.iconfont{
+		color:@color_lightgreen;
+		text-shadow:none;
+	}
+}

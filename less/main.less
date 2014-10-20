@@ -537,3 +537,29 @@ body{
 		text-align: left;
 	}
 }
+
+
+//首页
+.mainnav{
+	padding: 0px;
+	.col-xs-4{
+		padding: 0px;
+		border-bottom:1px solid @gary_bg;
+		border-right:1px solid @gary_bg;
+		background-color: #fff;
+		&:nth-child(3n){
+			border-right:none;
+		}
+		.iconfont{
+			.bb(100%,60%);
+			padding-top: 10%;
+			font-size: 40px;
+			text-align: center;
+		}
+		.text{
+			.bb(100%,40%);
+			text-align: center;
+			color: @gary_text;
+		}
+	}
+}
