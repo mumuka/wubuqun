@@ -17,6 +17,27 @@
 </head>
 <body>
 
+	<span class="wbtn wbtn_main" id="cececece">ddd</span>
+	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"  aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+<!-- 	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	        <h4 class="modal-title">Modal title</h4>
+	      </div> -->
+	      <div class="modal-body textcenter">
+	        <p>提交成功</p>
+	      </div>
+	      <div class="modal-footer textcenter">
+	        <span class="wbtn wbtn_main" data-dismiss="modal">确认</span>
+
+	        <!-- <a href="#" class="wbtn wbtn_main" data-dismiss="modal">确认</a> -->
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
 <div class="teacherheader">
 	<div class="col-xs-4">
 		<span class="wbtn teachertag wbtn_yellow">
@@ -78,29 +99,7 @@
 	<div class="introduction">
 		<strong>导师简介：</strong>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
 	</div>
-
-	<button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
-
-
-	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"  aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-<!-- 	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-	        <h4 class="modal-title">Modal title</h4>
-	      </div> -->
-	      <div class="modal-body textcenter">
-	        <p>提交成功</p>
-	      </div>
-	      <div class="modal-footer textcenter">
-	        <a href="#" class="wbtn wbtn_main" data-dismiss="modal">确认</a>
-	      </div>
-	    </div><!-- /.modal-content -->
-	  </div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
-
 </div><!-- mainlist -->
-
 
 <div class="mainlist bottom50 teacherpagetag ">
 	<a href="#" class="listbox">
@@ -186,11 +185,6 @@
 </div>
 
 
-
-
-
-
-
 <div class="footerbar">
 	<div class="col-xs-2 ">
 		<a class="wbtn wbtn_main" type="button" href="#">
@@ -219,7 +213,9 @@
 // 	cc++;
 // 	$(".teacherpraise")[0].childNodes[2].nodeValue=cc;
 // })
-
+$("#cececece").click(function(){
+	$('.bs-example-modal-sm').modal('show');
+})
 
 </script>
 </html>
