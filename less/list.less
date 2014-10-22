@@ -73,3 +73,71 @@
 		}
 	}
 }
+
+.activelist{
+	.listbox{
+		padding: 0px;
+		padding-bottom: 6px;
+		.mainimg{
+			.size(100%,auto);
+			img{
+				.size(100%,auto);
+				border-top-left-radius:5px;
+				border-top-right-radius:5px; 
+			}
+		}//.mainimg
+		.activeconcent{
+			padding: 10px;
+			padding-bottom: 0px;
+			.textbox{
+				h3{
+					max-height:40px;
+					padding-right: 0px;
+				}
+				p{
+					min-height: 22px;
+					margin-bottom: 6px;
+					font-size: 16px;
+					// color:@gary_dark;
+					.iconfont{
+						font-size: 18px;
+						color:@color_purplered;
+						padding-right: 5px;
+					}
+				}
+			}//.textbox
+		}//.activeconcent
+		.baomingstatus{
+			.bb(50px,50px);
+			position:absolute;
+			bottom:0px;
+			right: 0px;
+			overflow: hidden;
+			border-bottom-right-radius:5px;
+			.text{
+				.bb(50px,20px);
+				text-align: center;
+				line-height: 20px;
+				-webkit-transform: translate3d(9px,21px,0px) rotate(-45deg);
+				color: #fff;
+				position:absolute;
+				top: 0px;
+				left: 0px;
+				text-shadow: 0 0 4px rgba(0,0,0,0.3);
+				font-weight:bold;
+			}
+			.sanjiao{
+				.bb(inherit,inherit);
+				fill:@color_greenyellow;
+			}
+		}
+	}//.listbox
+	.partyover{
+		.sanjiao{
+			fill:@gary_c !important;
+		}
+		.wbtn_flytr{
+			background-color:@gary_c !important;
+		}
+	}
+}
