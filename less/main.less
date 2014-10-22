@@ -579,7 +579,34 @@ body{
 }
 
 
-
+.indexlist{
+	padding-top: 0px;
+	padding-bottom: 10px;
+	.mainlist{
+		padding-left:0;
+		padding-right:0;
+	}
+	.tagbar{
+		.size(100%,35px);
+		background-color: @gary_c;
+		border-radius: 5px;
+		.wbtn{
+			float: left;
+			text-align: center;
+			.size(50%,35px);
+			border-radius: 5px;
+			line-height: 35px;
+			color: #fff;
+			.transition(0.5s ease-out);
+			.iconfont{
+				font-size: 20px;
+			}
+		}
+	}
+	.discusslist{
+		display: none;
+	}
+}
 
 
 
