@@ -609,8 +609,106 @@ body{
 }
 
 
+//活动详情
+.activetitle{
+	padding-bottom: 0px;
+	h1{
+		font-size: 20px;
+		margin: 0px; 
+		line-height: 22px;
+	}
+}
+.activeinfomainlist{
+	background-color: #fff;
+	.listbox{
+		margin-bottom: 0px;
+	}
+	.textbox{
+		.text{
+			color:@color_title;
+		}
+	}
+	.applyactive{
+		.input-group{
+			margin-top: 10px;
+			&:first-child{
+				margin-top: 0px;
+			}
+		}
+		.input-group-addon{
+			.iconfont{
+				font-size: 14px;
+			}
+		}
+		.activeinfosubmitbtn{
+			.bb(100%,40px);
+			text-align: center;
+			.iconfont{
+				margin-right: 5px;
+			}
 
+		}
+	}
+}
+.articlebox{
+	img{
+		width: 100%;
+	}
+}
 
+.applypeoplelist{
+	padding-top: 0px;
+	.listtitle{
+		h3{
+			margin: 0px;
+			font-size: 16px;
+			float: left;
+		}
+		.wbtn_tag{
+			float: right;
+		}
+		.clearfix();
+		margin-bottom: 10px;
+	}
+
+	.outerlistbox{
+		border:1px solid @gary_c;
+		border-radius: 10px;
+		.listbox{
+			padding: 2px 10px;
+			.size(100%,35px);
+			border-top:1px solid @gary_c;
+			line-height: 30px;
+			&:first-child{
+				border-top: none;
+			}
+			.wbtn_round{
+				float: left;
+				.square(30px);
+				img{
+					.square(30px);
+				}
+			}
+			.text{
+				margin-left: 10px;
+				float: left;
+				color:@color_title;
+			}
+			.time{
+				float: right;
+				color:@gary_text;
+			}
+		}//.listbox
+		.loadmorebtn{
+			text-align: center;
+			.wbtn{
+				height: 30px;
+				line-height: 30px;
+				border-radius: 5px;
+			}
+		}
+	}//.outerlistbox
+}
 
 
 

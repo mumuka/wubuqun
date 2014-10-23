@@ -61,16 +61,23 @@
 	z-index: 2;
 	background-color: @gary_bar;
 	&:extend(.boxshadow);
-	.col-xs-3{
+	>div{
 		padding: 0;
 		text-align: center;
-		border-left:1px solid @gary_bg;
+		border-left:1px solid @gary_c;
 		&:first-child{border: none;}	
 	}
 	.wlink{
 		display: block;
+		text-align: center;
 		font-size: 14px;
 		.size(100%,36px);
+		&:link,&:visited{
+			color:@color_main;
+		}
+		&:hover,&:active{
+			color:@color_main;
+		}
 	}
 	.current{
 		font-weight: bold;
