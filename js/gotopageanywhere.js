@@ -23,19 +23,25 @@
 		};
 	}
 }());
-function gotopageanywhere(container){
+function gotopageanywhere(container,callback){
 	//滚动
 	var scroll=function(){
 		var curscroll=document.body.scrollTop;
-		var lastscroll=$(container)[0].offsetTop;
 
-			console.log(lastscroll)
+		if(typeof container=="number"){
+			var lastscroll=container;
+		}else{
+			var lastscroll=$(container)[0].offsetTop;
+		}
+
+			// console.log(lastscroll)
 		var d=lastscroll-curscroll;
 		if(Math.abs(d)>1){
 			curscroll+=d/12;
 			requestAnimationFrame(scroll)
 		}else{
 			curscroll=lastscroll;
+			callback?callback():"";
 		}
 		document.body.scrollTop=parseInt(curscroll);
 	}
