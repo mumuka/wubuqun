@@ -1,5 +1,9 @@
 
 define(["jquery","gotopageanywhere"],function($) {
+
+
+
+	//赚积分
 	$("#earnscorebtn").bind("touchend",function(){
 		showhideearnbtn()
 	})
@@ -15,4 +19,20 @@ define(["jquery","gotopageanywhere"],function($) {
 			$(".earnscore").addClass("showearnscore")
 		}
 	}
+
+	//积分增长
+	requestAnimationFrame(numrun)
+	function numrun(){
+		var nowscore=parseInt($("#scoreshownum").text());
+		var lastscore=parseInt($("#scorehidenum").text());
+		var dscore=lastscore-nowscore;
+		if(dscore>10){
+			nowscore+=parseInt(dscore/10);
+			requestAnimationFrame(numrun)
+		}else{
+			nowscore=lastscore;
+		}
+		$("#scoreshownum").text(nowscore);
+	}
+
 });
