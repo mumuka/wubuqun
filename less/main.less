@@ -856,8 +856,130 @@ body{
 
 
 
+//积分排行榜
 
+.scoretoplist{
+	// border-top: 1px solid @gary_c;
+	.clearfix();
+	.listbox{
+		clear: both;
+		.size(100%,50px);
+		padding: 5px 10px;
+		border-bottom: 1px solid @gary_c;
+		.listnum{
+			.square(40px);
+			line-height: 40px;
+			font-size: 10px;
+			float: left;
+			text-align: center;
+		}
+		.touxiang{
+			float: left;
+			margin-right: 10px;
+			margin-top: 3px;
+			.square(34px);
+			img{
+				.square(34px);
+			}
+		}
+		.name{
+			line-height: 40px;
+			color:@color_title;
+			float: left;
+		}
+		.score{
+			line-height: 40px;
+			float: right;
+			font-size: 20px;
+			color:@color_red;
+		}
+		&:nth-child(1),&:nth-child(2),&:nth-child(3){
+			.size(33%,100px);
+			border-bottom: none;
+			position: relative;
+			clear:none;
+			float: left;
+			.listnum{
+				.square(24px);
+				border-radius: 24px;
+				line-height: 24px;
+				font-size: 18px;
+				position: absolute;
+				bottom: 33px;
+				right: 12px;
+				color:#fff;
+				background-color: @color_red;
+			}
+			.touxiang{
+				float: none;
+				margin: 0px auto;
+				.bb(60px,60px);
+				img{
+					.square(60px);
+				}
+			}
+			.name{
+				.bb(100%,20px);
+				text-align: center;
+				line-height: 20px;
+				color:@color_title;
+				float: none;
+			}
+			.score{
+				line-height: 20px;
+				text-align: center;
+				.bb(100%,20px);
+				float: none;
+				font-size: 20px;
+				color:@color_red;
+			}
+		}
+		&:nth-child(1){
+			.translate(100%,0);
+			.touxiang{
+				.bb(60px,60px);
+				img{
+					.square(60px);
+				}
+			}
+		}
+		&:nth-child(2){
+			.translate(-100%,0);
+			.listnum{
+				.square(22px);
+				border-radius: 22px;
+				line-height: 22px;
+				font-size: 16px;
+				background-color: @color_orange;
+			}
+			.touxiang{
+				margin-top: 5px;
+				.bb(55px,55px);
+				img{
+					.square(55px);
+				}
+			}
+		}
+		&:nth-child(3){
+			.listnum{
+				.square(20px);
+				border-radius: 20px;
+				line-height: 20px;
+				font-size: 14px;
+				background-color: @color_yellow;
+				right: 15px;
+			}
+			.touxiang{
+				margin-top: 10px;
+				.bb(50px,50px);
+				img{
+					.square(50px);
+				}
+			}
+		}
 
+	}//.listbox
+}
 
 
 
