@@ -4,6 +4,24 @@
 	background-color: @gary_bg;
 	position: relative;
 	.size(100%,auto);
+	.tagbar{
+		margin-bottom: 10px;
+		.size(100%,35px);
+		background-color: @gary_c;
+		border-radius: 5px;
+		.wbtn{
+			float: left;
+			text-align: center;
+			.size(50%,35px);
+			border-radius: 5px;
+			line-height: 35px;
+			color: #fff;
+			.transition(0.5s ease-out);
+			.iconfont{
+				font-size: 20px;
+			}
+		}
+	}
 	.listbox{
 		background-color: #fff;
 		margin-bottom: 10px;
@@ -21,8 +39,6 @@
 			margin-right: 10px;
 			img{width: 100%;}
 		}
-		
-
 		.textbox{
 			h3{
 				max-height: 20px;
@@ -33,6 +49,10 @@
 				font-weight: bold;
 				overflow: hidden;
 				padding-right: 5px;
+				.ellipsis();
+			}
+			h3.shorttitle{
+				padding-right: 10px;
 			}
 			.maxh3{
 				max-height: 40px;
