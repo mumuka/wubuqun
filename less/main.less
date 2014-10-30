@@ -651,6 +651,7 @@ body{
 	}
 }
 .articlebox{
+	font-size: 14px;
 	img{
 		width: 100%;
 	}
@@ -981,7 +982,59 @@ body{
 	}//.listbox
 }
 
+//职位详情
+.applyposition{
+	.input-group-addon{
+		.iconfont{
+			font-size: 20px;
+		}
+	}
+	.input-group{
+		margin-bottom: 10px;
+	}
+	.infosubmitbtn{
+		.bb(100%,auto);
+		text-align: center;
+	}
+}
+.companyinfo{
+	border-bottom: 1px solid @gary_c;
+	.infolist{
+		.title{
+			color: @gary_text;
+		}
+	}
 
+}
+.optiontitle{
+	position: relative;
+	border-bottom: 1px solid @gary_c;
+	h1{
+		font-size: 16px;
+		margin: 0px;
+	}
+	.salarybox{
+		color:@color_orange;
+		font-size: 16px;
+		margin: 0px;
+	}
+	.companyname{
+		color:@gary_text;
+		font-size: 12px;
+		margin: 0px;
+	}
+	.companylogo{
+		position: absolute;
+		border:2px solid @gary_bg;
+		top: 15px;
+		right: 10px;
+		text-align: center;
+		.size(120px,47px);
+		img{
+			.size(auto,inherit)
+		}
+	}
+}
 
 
 
