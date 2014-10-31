@@ -59,7 +59,7 @@
 	</div>
 </div>
 
-<div class="mainlist top86 bottom50">
+<div class="mainlist top86 bottom50" id="needload">
 <!-- style="background-color:#000;http://www.baidu.com" -->
 	<a href="javascript:alert(1);" class="listbox" >
 		<div class="touxiang wbtn_round">
@@ -96,6 +96,7 @@
 		</div>
 	</a><!-- listbox -->
 
+	<span class="loadtip">加载更多</span>
 </div><!-- mainlist -->
 
 <div class="footerbar">
@@ -132,10 +133,34 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="js/behindbar.js?v=0.0.8"></script>
+<script src="js/bottomload.js?v=0.0.2"></script>
 <script>
+
+
+
+	add()
+
+
+function add(){
+	$("#needload").find(".loadtip").text("加载中...")
+	setTimeout(function(){
+		var cc="<a href='javascript:alert(1);' class='listbox' ><div class='touxiang wbtn_round'><img src='http://dev.comeoncloud.net/test/lib/pic/touxiang.jpg' alt=''></div><div class='textbox'><h3>导师姓名—职位名称</h3><p>某行业龙头技校<br>那么问题来了，挖掘机哪家强</p></div><div class='tagbox'><span class='wbtn_tag wbtn_yellow'><span class='iconfont icon-34'></span>20</span><span class='wbtn_tag wbtn_greenyellow'><span class='iconfont icon-34'></span>20</span></div><div class='tagbox'><span class='wbtn_tag wbtn_main'>技能标签</span><span class='wbtn_tag wbtn_main'>行业标签</span><span class='wbtn_tag wbtn_main'>行业</span><span class='wbtn_tag wbtn_main'>行业2</span></div><div class='wbtn_fly wbtn_flybr wbtn_green consult'>立即咨询</div></a>"
+		for (var i = 0; i < 4; i++) {
+			cc+=cc;
+		};
+		$("#needload").find(".loadtip").before(cc);
+		$("#needload").find(".loadtip").text("加载更多")
+		$("#needload").bottomLoad(function(){
+			add()
+		})
+	},2000)
+
+}
 // alert(navigator.userAgent)
 var arr=[".footerbar",".wtopbar",".mainlist",".paixu"];
 $("#categorybtn").controlbehindbar(arr,".mainlist");
 
 </script>
 </html>
+
+
