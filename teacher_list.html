@@ -54,8 +54,95 @@
 	<div class="col-xs-3">
 		<a href="#" class="wlink">最多文章</a>
 	</div>
-	<div class="col-xs-3">
-		<a href="#" class="wlink">最高人气</a>
+	<div class="col-xs-3" id="filterbtn">
+		<span  class="wlink">筛选<span class="iconfont icon-back shaxuan"></span></span>
+	</div>
+	<div class="filterbox" id="filterbox">
+		<h3>技能标签</h3>
+		<input type="checkbox" class="checkinput" id="checkbox01">
+		<label class="checklabel wbtn wbtn_gary" for="checkbox01">
+			<span class="title">标签名称</span>
+			<span class="wbtn wbtn_orange checkmark">
+				<span class="iconfont icon-yes2"></span>
+			</span>
+		</label>
+
+		<input type="checkbox" class="checkinput" id="checkbox02">
+		<label class="checklabel wbtn wbtn_gary" for="checkbox02">
+			<span class="title">标签名称</span>
+			<span class="wbtn wbtn_orange checkmark">
+				<span class="iconfont icon-yes2"></span>
+			</span>
+		</label>
+
+		<input type="checkbox" class="checkinput" id="checkbox03">
+		<label class="checklabel wbtn wbtn_gary" for="checkbox03">
+			<span class="title">标签名称</span>
+			<span class="wbtn wbtn_orange checkmark">
+				<span class="iconfont icon-yes2"></span>
+			</span>
+		</label>
+
+		<input type="checkbox" class="checkinput" id="checkbox04">
+		<label class="checklabel wbtn wbtn_gary" for="checkbox04">
+			<span class="title">标签名称</span>
+			<span class="wbtn wbtn_orange checkmark">
+				<span class="iconfont icon-yes2"></span>
+			</span>
+		</label>
+		<h3>技能标签</h3>
+
+		<input type="checkbox" class="checkinput" id="checkbox05">
+		<label class="checklabel wbtn wbtn_gary" for="checkbox05">
+			<span class="title">标签名称</span>
+			<span class="wbtn wbtn_orange checkmark">
+				<span class="iconfont icon-yes2"></span>
+			</span>
+		</label>
+
+		<input type="checkbox" class="checkinput" id="checkbox06">
+		<label class="checklabel wbtn wbtn_gary" for="checkbox06">
+			<span class="title">标签名称</span>
+			<span class="wbtn wbtn_orange checkmark">
+				<span class="iconfont icon-yes2"></span>
+			</span>
+		</label>
+
+		<input type="checkbox" class="checkinput" id="checkbox07">
+		<label class="checklabel wbtn wbtn_gary" for="checkbox07">
+			<span class="title">标签名称</span>
+			<span class="wbtn wbtn_orange checkmark">
+				<span class="iconfont icon-yes2"></span>
+			</span>
+		</label>
+
+		<input type="checkbox" class="checkinput" id="checkbox08">
+		<label class="checklabel wbtn wbtn_gary" for="checkbox08">
+			<span class="title">标签名称</span>
+			<span class="wbtn wbtn_orange checkmark">
+				<span class="iconfont icon-yes2"></span>
+			</span>
+		</label>
+
+		<input type="checkbox" class="checkinput" id="checkbox09">
+		<label class="checklabel wbtn wbtn_gary" for="checkbox09">
+			<span class="title">标签名称</span>
+			<span class="wbtn wbtn_orange checkmark">
+				<span class="iconfont icon-yes2"></span>
+			</span>
+		</label>
+
+		<input type="checkbox" class="checkinput" id="checkbox10">
+		<label class="checklabel wbtn wbtn_gary" for="checkbox10">
+			<span class="title">标签名称</span>
+			<span class="wbtn wbtn_orange checkmark">
+				<span class="iconfont icon-yes2"></span>
+			</span>
+		</label>
+
+
+		<span class="wbtn wbtn_main">清除筛选</span>
+		<span class="wbtn wbtn_main">确&nbsp;&nbsp;&nbsp;&nbsp;定</span>
 	</div>
 </div>
 
@@ -134,12 +221,9 @@
 <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="js/behindbar.js?v=0.0.8"></script>
 <script src="js/bottomload.js?v=0.0.2"></script>
+<script src="js/filterbox.js"></script>
 <script>
-
-
-
-	add()
-
+add()
 
 function add(){
 	$("#needload").find(".loadtip").text("加载中...")
