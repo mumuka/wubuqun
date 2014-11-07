@@ -1,9 +1,9 @@
 mainnavheight()
-$(window).resize(function(){
+$(window).resize(function() {
 	mainnavheight();
 })
 
-function mainnavheight(){
+function mainnavheight() {
 	var cx4 = $(".mainnav").find(".col-xs-4")
 	cx4.css({
 		"height": cx4.width()
@@ -11,17 +11,30 @@ function mainnavheight(){
 }
 
 
-$("#newslistbtn").click(function(){
-	if($("#newslistbtn").hasClass("wbtn_greenyellow"))return;
+$("#newslistbtn").click(function() {
+	if ($("#newslistbtn").hasClass("wbtn_greenyellow")) return;
 	$("#discusslistbtn").removeClass("wbtn_yellow");
 	$("#newslistbtn").addClass("wbtn_greenyellow");
 	$(".discusslist").hide();
 	$(".articlelist").show();
 })
-$("#discusslistbtn").click(function(){
-	if($("#discusslistbtn").hasClass("wbtn_yellow"))return;
+$("#discusslistbtn").click(function() {
+	if ($("#discusslistbtn").hasClass("wbtn_yellow")) return;
 	$("#newslistbtn").removeClass("wbtn_greenyellow");
 	$("#discusslistbtn").addClass("wbtn_yellow");
 	$(".articlelist").hide();
 	$(".discusslist").show();
 })
+
+$.fn.touchSlider = function() {
+	var width=$(this).width()
+	var height=$(this).height()
+
+
+}
+
+$("#slider").touchSlider()
+
+
+
+

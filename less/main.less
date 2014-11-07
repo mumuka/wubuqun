@@ -1037,11 +1037,106 @@ body{
 		// 		}
 		// 	}
 		// }
+
+
+		//奖杯 2 1 3
+		// &:nth-child(1),&:nth-child(2),&:nth-child(3){
+		// 	.size(33%,100px);
+		// 	border-bottom: none;
+		// 	position: relative;
+		// 	clear:none;
+		// 	float: left;
+		// 	.listnum{
+		// 		.square(40px);
+		// 		line-height: 24px;
+		// 		font-size: 18px;
+		// 		position: absolute;
+		// 		bottom: 15px;
+		// 		right:0px;
+		// 		overflow: hidden;
+		// 		&:before{
+		// 			display: block;
+		// 			.square(40px);
+		// 			font-size: 20px;
+		// 			content:"\e63a";
+		// 		}
+		// 	}
+		// 	.touxiang{
+		// 		float: none;
+		// 		margin: 0px auto;
+		// 		.bb(60px,60px);
+		// 		img{
+		// 			.square(60px);
+		// 		}
+		// 	}
+		// 	.name{
+		// 		.bb(100%,20px);
+		// 		text-align: center;
+		// 		line-height: 20px;
+		// 		color:@color_title;
+		// 		float: none;
+		// 	}
+		// 	.score{
+		// 		line-height: 20px;
+		// 		text-align: center;
+		// 		.bb(100%,20px);
+		// 		float: none;
+		// 		font-size: 20px;
+		// 		color:@color_red;
+		// 	}
+		// }
+		// &:nth-child(1){
+		// 	.translate(100%,0);
+		// 	.listnum{
+		// 		color: #ffca28;
+		// 	}
+		// 	.touxiang{
+		// 		.bb(60px,60px);
+		// 		img{
+		// 			.square(60px);
+		// 		}
+		// 	}
+		// }
+		// &:nth-child(2){
+		// 	.translate(-100%,0);
+		// 	.listnum{
+		// 		color: #bfbfbf;
+		// 	}
+		// 	.touxiang{
+		// 		margin-top: 5px;
+		// 		.bb(55px,55px);
+		// 		img{
+		// 			.square(55px);
+		// 		}
+		// 	}
+		// }
+		// &:nth-child(3){
+		// 	.listnum{
+		// 		color: #f27f1a;
+		// 	}
+		// 	.touxiang{
+		// 		margin-top: 10px;
+		// 		.bb(50px,50px);
+		// 		img{
+		// 			.square(50px);
+		// 		}
+		// 	}
+		// }
+
+		//奖杯 1 2 3
 		&:nth-child(1),&:nth-child(2),&:nth-child(3){
-			.touxiang{
-				margin-top: 0px;
-			}
+			.size(33%,100px);
+			border-bottom: none;
+			position: relative;
+			clear:none;
+			float: left;
 			.listnum{
+				.square(40px);
+				line-height: 24px;
+				font-size: 18px;
+				position: absolute;
+				bottom: 15px;
+				right:0px;
 				overflow: hidden;
 				&:before{
 					display: block;
@@ -1050,12 +1145,34 @@ body{
 					content:"\e63a";
 				}
 			}
+			.touxiang{
+				float: none;
+				margin: 0px auto;
+				.bb(60px,60px);
+				img{
+					.square(60px);
+				}
+			}
+			.name{
+				.bb(100%,20px);
+				text-align: center;
+				line-height: 20px;
+				color:@color_title;
+				float: none;
+			}
+			.score{
+				line-height: 20px;
+				text-align: center;
+				.bb(100%,20px);
+				float: none;
+				font-size: 20px;
+				color:@color_red;
+			}
 		}
 		&:nth-child(1){
-			height: 70px;
+			// .translate(100%,0);
 			.listnum{
-				margin-top: 10px;
-				color:#ffca28;
+				color: #ffca28;
 			}
 			.touxiang{
 				.bb(60px,60px);
@@ -1065,12 +1182,12 @@ body{
 			}
 		}
 		&:nth-child(2){
-			height: 65px;
+			// .translate(-100%,0);
 			.listnum{
-				margin-top: 7px;
-				color:#bfbfbf;
+				color: #bfbfbf;
 			}
 			.touxiang{
+				margin-top: 5px;
 				.bb(55px,55px);
 				img{
 					.square(55px);
@@ -1078,18 +1195,72 @@ body{
 			}
 		}
 		&:nth-child(3){
-			height: 60px;
 			.listnum{
-				margin-top: 5px;
-				color:#f27f1a;
+				color: #f27f1a;
 			}
 			.touxiang{
+				margin-top: 10px;
 				.bb(50px,50px);
 				img{
 					.square(50px);
 				}
 			}
 		}
+
+		//奖杯竖排
+		// &:nth-child(1),&:nth-child(2),&:nth-child(3){
+		// 	.touxiang{
+		// 		margin-top: 0px;
+		// 	}
+		// 	.listnum{
+		// 		overflow: hidden;
+		// 		&:before{
+		// 			display: block;
+		// 			.square(40px);
+		// 			font-size: 20px;
+		// 			content:"\e63a";
+		// 		}
+		// 	}
+		// }
+		// &:nth-child(1){
+		// 	height: 70px;
+		// 	.listnum{
+		// 		margin-top: 10px;
+		// 		color:#ffca28;
+		// 	}
+		// 	.touxiang{
+		// 		.bb(60px,60px);
+		// 		img{
+		// 			.square(60px);
+		// 		}
+		// 	}
+		// }
+		// &:nth-child(2){
+		// 	height: 65px;
+		// 	.listnum{
+		// 		margin-top: 7px;
+		// 		color:#bfbfbf;
+		// 	}
+		// 	.touxiang{
+		// 		.bb(55px,55px);
+		// 		img{
+		// 			.square(55px);
+		// 		}
+		// 	}
+		// }
+		// &:nth-child(3){
+		// 	height: 60px;
+		// 	.listnum{
+		// 		margin-top: 5px;
+		// 		color:#f27f1a;
+		// 	}
+		// 	.touxiang{
+		// 		.bb(50px,50px);
+		// 		img{
+		// 			.square(50px);
+		// 		}
+		// 	}
+		// }
 	}//.listbox
 }
 
