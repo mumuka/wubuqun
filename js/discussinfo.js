@@ -12,7 +12,7 @@ var tth=diss.find(".title").height()
 var desh=diss.find(".description").height()
 var mainh=tth+desh+34;
 if (mainh>100) {
-	diss.bind("touchend",function(){
+	diss.bind("tap",function(){
 		if(!$(this).attr("style")){
 			diss.css({"max-height":mainh});
 			diss.find(".dropdownicon").css({"transform":"rotate(90deg)"})
