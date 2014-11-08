@@ -2,6 +2,65 @@ body{
 	background-color: @main-bgcolor;
 }
 
+//导师列表
+.filterbox{
+	padding:0 10px !important;
+	position: fixed;
+	top: 86px;
+	border-top: 1px solid @gary_c;
+	.size(100%,0px);
+	overflow-y:auto; 
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+	background-color: #fff;
+	.transition(0.5s ease-out);
+	.checkinput{
+		position: absolute;
+		.bb(1px,1px);
+		top: 0px;
+		left: -100px;
+	}
+	h3{
+		font-size: 14px;
+		margin: 0px;
+		text-align: left;
+		margin-bottom: 5px;
+		color:@color_title;
+		margin-top: 10px;
+	}
+	.checklabel{
+		position: relative;
+		border-radius: 5px;
+		.size(45%,35px);
+		line-height: 35px;
+		.title{
+			.size(100%,35px);
+			.ellipsis();
+			}
+		.checkmark{
+			display: none;
+			position: absolute;
+			padding: 0px;
+			top: -1px;
+			right: -1px;
+			border-radius: 5px;
+			border-top-left-radius: 0px;
+			border-bottom-right-radius: 0px;
+			line-height: 16px;
+			.square(20px);
+			.iconfont{
+				font-size: 12px;
+			}
+		}
+	}
+	.checkinput:checked+.checklabel{
+		background-color: @color_red;
+		border-color:@color_red;
+		.checkmark{
+			display: block;
+		}
+	}
+}
+
 
 //导师详情
 .teacherheader{
@@ -651,6 +710,7 @@ body{
 	}
 }
 .articlebox{
+	font-size: 14px;
 	img{
 		width: 100%;
 	}
@@ -741,11 +801,556 @@ body{
 			line-height: 100px;
 			font-size: 60px;
 		}
+		#scorehidenum{
+			display: none;
+		}
 	}//.numbox
 	.iconfont{
 		margin-right: 3px;
 	}
 }
+
+.earnscore{
+	// border-bottom: 1px solid @gary_c;
+	.size(100%,0px);
+	overflow: hidden;
+	.clearfix();
+	.transition(0.5s ease-out);
+	.col-xs-4{
+		padding: 0px;
+		text-align: center;
+		font-size: 14px;
+		line-height: 40px;
+		border-right: 1px solid @gary_c;
+		border-bottom: 1px solid @gary_c;
+
+		.iconfont{
+			font-size: 18px;
+		}
+		&:nth-child(3n){
+			border-right: none;
+		}
+	}
+}
+.showearnscore{
+	height: 82px;
+}
+
+
+.scorelist{
+	.listbar{
+		.size(100%;auto);
+		border-radius: 5px;
+		line-height: 30px;
+		padding: 10px;
+		.clearfix();
+		.col-xs-4{
+			color:@color_main;
+			height: 32px;
+			border-top:1px solid @color_main;
+			border-bottom:1px solid @color_main;
+			text-align: center;
+			&:first-child{
+				border-bottom-left-radius: 5px;
+				border-top-left-radius: 5px;
+				border-left: 1px solid @color_main;
+			}
+			&:last-child{
+				border-bottom-right-radius: 5px;
+				border-top-right-radius: 5px;
+				border-right: 1px solid @color_main;
+			}
+		}//.listtag
+		.current{
+			background-color: @color_main;
+			color:#fff;
+		}
+	}//.listbar
+	.listbox{
+		position: relative;
+		.size(100%,50px);
+		border-bottom: 1px solid @gary_c;
+		.wbtn_round{
+			.square(40px);
+			position: absolute;
+			top: 5px;
+			left: 10px;
+			.iconfont{
+				line-height: 40px;
+			}
+		}
+		.textbox{
+			.size(100%,50px);
+			padding-left: 60px;
+			padding-right: 40px;
+			h3{
+				.bb(100%,25px);
+				padding-top: 5px;
+				line-height: 20px;
+				font-size: 14px;
+				margin: 0px;
+				color:@color_title;
+				.ellipsis();
+			}
+			.time{
+				.bb(100%,25px);
+				color:@gary_text;
+				font-size: 12px;
+				line-height: 25px;
+			}
+		}
+		.scorenum{
+			position: absolute;
+			height: 40px;
+			top: 5px;
+			right: 10px;
+			line-height: 40px;
+			font-size: 20px;
+			color:@gary_text;
+		}
+		.addscore{
+			color:@color_red;
+		}
+	}//.listbox
+}
+
+
+
+//积分排行榜
+
+.scoretoplist{
+	// border-top: 1px solid @gary_c;
+	.clearfix();
+	.listbox{
+		clear: both;
+		.size(100%,50px);
+		padding: 5px 10px;
+		border-bottom: 1px solid @gary_c;
+		.listnum{
+			.square(40px);
+			line-height: 40px;
+			font-size: 10px;
+			float: left;
+			text-align: center;
+		}
+		.touxiang{
+			float: left;
+			margin-right: 10px;
+			margin-top: 3px;
+			.square(34px);
+			img{
+				.square(34px);
+			}
+		}
+		.name{
+			line-height: 40px;
+			color:@color_title;
+			float: left;
+		}
+		.score{
+			line-height: 40px;
+			float: right;
+			font-size: 20px;
+			color:@color_red;
+		}
+		// &:nth-child(1),&:nth-child(2),&:nth-child(3){
+		// 	.size(33%,100px);
+		// 	border-bottom: none;
+		// 	position: relative;
+		// 	clear:none;
+		// 	float: left;
+		// 	.listnum{
+		// 		.square(24px);
+		// 		border-radius: 24px;
+		// 		line-height: 24px;
+		// 		font-size: 18px;
+		// 		position: absolute;
+		// 		bottom: 33px;
+		// 		right: 12px;
+		// 		color:#fff;
+		// 		background-color: @color_red;
+		// 	}
+		// 	.touxiang{
+		// 		float: none;
+		// 		margin: 0px auto;
+		// 		.bb(60px,60px);
+		// 		img{
+		// 			.square(60px);
+		// 		}
+		// 	}
+		// 	.name{
+		// 		.bb(100%,20px);
+		// 		text-align: center;
+		// 		line-height: 20px;
+		// 		color:@color_title;
+		// 		float: none;
+		// 	}
+		// 	.score{
+		// 		line-height: 20px;
+		// 		text-align: center;
+		// 		.bb(100%,20px);
+		// 		float: none;
+		// 		font-size: 20px;
+		// 		color:@color_red;
+		// 	}
+		// }
+		// &:nth-child(1){
+		// 	.translate(100%,0);
+		// 	.touxiang{
+		// 		.bb(60px,60px);
+		// 		img{
+		// 			.square(60px);
+		// 		}
+		// 	}
+		// }
+		// &:nth-child(2){
+		// 	.translate(-100%,0);
+		// 	.listnum{
+		// 		.square(22px);
+		// 		border-radius: 22px;
+		// 		line-height: 22px;
+		// 		font-size: 16px;
+		// 		background-color: @color_orange;
+		// 	}
+		// 	.touxiang{
+		// 		margin-top: 5px;
+		// 		.bb(55px,55px);
+		// 		img{
+		// 			.square(55px);
+		// 		}
+		// 	}
+		// }
+		// &:nth-child(3){
+		// 	.listnum{
+		// 		.square(20px);
+		// 		border-radius: 20px;
+		// 		line-height: 20px;
+		// 		font-size: 14px;
+		// 		background-color: @color_yellow;
+		// 		right: 15px;
+		// 	}
+		// 	.touxiang{
+		// 		margin-top: 10px;
+		// 		.bb(50px,50px);
+		// 		img{
+		// 			.square(50px);
+		// 		}
+		// 	}
+		// }
+
+
+		//奖杯 2 1 3
+		// &:nth-child(1),&:nth-child(2),&:nth-child(3){
+		// 	.size(33%,100px);
+		// 	border-bottom: none;
+		// 	position: relative;
+		// 	clear:none;
+		// 	float: left;
+		// 	.listnum{
+		// 		.square(40px);
+		// 		line-height: 24px;
+		// 		font-size: 18px;
+		// 		position: absolute;
+		// 		bottom: 15px;
+		// 		right:0px;
+		// 		overflow: hidden;
+		// 		&:before{
+		// 			display: block;
+		// 			.square(40px);
+		// 			font-size: 20px;
+		// 			content:"\e63a";
+		// 		}
+		// 	}
+		// 	.touxiang{
+		// 		float: none;
+		// 		margin: 0px auto;
+		// 		.bb(60px,60px);
+		// 		img{
+		// 			.square(60px);
+		// 		}
+		// 	}
+		// 	.name{
+		// 		.bb(100%,20px);
+		// 		text-align: center;
+		// 		line-height: 20px;
+		// 		color:@color_title;
+		// 		float: none;
+		// 	}
+		// 	.score{
+		// 		line-height: 20px;
+		// 		text-align: center;
+		// 		.bb(100%,20px);
+		// 		float: none;
+		// 		font-size: 20px;
+		// 		color:@color_red;
+		// 	}
+		// }
+		// &:nth-child(1){
+		// 	.translate(100%,0);
+		// 	.listnum{
+		// 		color: #ffca28;
+		// 	}
+		// 	.touxiang{
+		// 		.bb(60px,60px);
+		// 		img{
+		// 			.square(60px);
+		// 		}
+		// 	}
+		// }
+		// &:nth-child(2){
+		// 	.translate(-100%,0);
+		// 	.listnum{
+		// 		color: #bfbfbf;
+		// 	}
+		// 	.touxiang{
+		// 		margin-top: 5px;
+		// 		.bb(55px,55px);
+		// 		img{
+		// 			.square(55px);
+		// 		}
+		// 	}
+		// }
+		// &:nth-child(3){
+		// 	.listnum{
+		// 		color: #f27f1a;
+		// 	}
+		// 	.touxiang{
+		// 		margin-top: 10px;
+		// 		.bb(50px,50px);
+		// 		img{
+		// 			.square(50px);
+		// 		}
+		// 	}
+		// }
+
+		//奖杯 1 2 3
+		&:nth-child(1),&:nth-child(2),&:nth-child(3){
+			.size(33%,100px);
+			border-bottom: none;
+			position: relative;
+			clear:none;
+			float: left;
+			.listnum{
+				.square(40px);
+				line-height: 24px;
+				font-size: 18px;
+				position: absolute;
+				bottom: 15px;
+				right:0px;
+				overflow: hidden;
+				&:before{
+					display: block;
+					.square(40px);
+					font-size: 20px;
+					content:"\e63a";
+				}
+			}
+			.touxiang{
+				float: none;
+				margin: 0px auto;
+				.bb(60px,60px);
+				img{
+					.square(60px);
+				}
+			}
+			.name{
+				.bb(100%,20px);
+				text-align: center;
+				line-height: 20px;
+				color:@color_title;
+				float: none;
+			}
+			.score{
+				line-height: 20px;
+				text-align: center;
+				.bb(100%,20px);
+				float: none;
+				font-size: 20px;
+				color:@color_red;
+			}
+		}
+		&:nth-child(1){
+			// .translate(100%,0);
+			.listnum{
+				color: #ffca28;
+			}
+			.touxiang{
+				.bb(60px,60px);
+				img{
+					.square(60px);
+				}
+			}
+		}
+		&:nth-child(2){
+			// .translate(-100%,0);
+			.listnum{
+				color: #bfbfbf;
+			}
+			.touxiang{
+				margin-top: 5px;
+				.bb(55px,55px);
+				img{
+					.square(55px);
+				}
+			}
+		}
+		&:nth-child(3){
+			.listnum{
+				color: #f27f1a;
+			}
+			.touxiang{
+				margin-top: 10px;
+				.bb(50px,50px);
+				img{
+					.square(50px);
+				}
+			}
+		}
+
+		//奖杯竖排
+		// &:nth-child(1),&:nth-child(2),&:nth-child(3){
+		// 	.touxiang{
+		// 		margin-top: 0px;
+		// 	}
+		// 	.listnum{
+		// 		overflow: hidden;
+		// 		&:before{
+		// 			display: block;
+		// 			.square(40px);
+		// 			font-size: 20px;
+		// 			content:"\e63a";
+		// 		}
+		// 	}
+		// }
+		// &:nth-child(1){
+		// 	height: 70px;
+		// 	.listnum{
+		// 		margin-top: 10px;
+		// 		color:#ffca28;
+		// 	}
+		// 	.touxiang{
+		// 		.bb(60px,60px);
+		// 		img{
+		// 			.square(60px);
+		// 		}
+		// 	}
+		// }
+		// &:nth-child(2){
+		// 	height: 65px;
+		// 	.listnum{
+		// 		margin-top: 7px;
+		// 		color:#bfbfbf;
+		// 	}
+		// 	.touxiang{
+		// 		.bb(55px,55px);
+		// 		img{
+		// 			.square(55px);
+		// 		}
+		// 	}
+		// }
+		// &:nth-child(3){
+		// 	height: 60px;
+		// 	.listnum{
+		// 		margin-top: 5px;
+		// 		color:#f27f1a;
+		// 	}
+		// 	.touxiang{
+		// 		.bb(50px,50px);
+		// 		img{
+		// 			.square(50px);
+		// 		}
+		// 	}
+		// }
+	}//.listbox
+}
+
+//职位详情
+.applyposition{
+	.input-group-addon{
+		.iconfont{
+			font-size: 20px;
+		}
+	}
+	.input-group{
+		margin-bottom: 10px;
+	}
+	.infosubmitbtn{
+		.bb(100%,auto);
+		text-align: center;
+	}
+}
+.companyinfo{
+	border-bottom: 1px solid @gary_c;
+	.infolist{
+		.title{
+			color: @gary_text;
+		}
+	}
+
+}
+.optiontitle{
+	position: relative;
+	border-bottom: 1px solid @gary_c;
+	h1{
+		font-size: 16px;
+		margin: 0px;
+	}
+	.salarybox{
+		color:@color_orange;
+		font-size: 16px;
+		margin: 0px;
+	}
+	.companyname{
+		color:@gary_text;
+		font-size: 12px;
+		margin: 0px;
+	}
+	.companylogo{
+		overflow: hidden;
+		position: absolute;
+		border:2px solid @gary_bg;
+		top: 15px;
+		right: 10px;
+		text-align: center;
+		.size(120px,47px);
+		img{
+			.size(120px,auto)
+		}
+	}
+}
+
+
+.partnerheader{
+	position: relative;
+	.partnerlogo{
+		.square(80px);
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		img{
+			.square(80px);
+		}
+	}
+	.partnertitle{
+		font-size: 18px;
+		padding-left: 100px;
+		margin: 0px;
+		line-height: 20px;
+		font-weight: bold;
+	}
+	.partnerdes{
+		font-size: 14px;
+		padding-left: 100px;
+		line-height: 20px;
+		max-height: 40px;
+		overflow: hidden;
+	}
+
+}
+
+
+
+
 
 
 
