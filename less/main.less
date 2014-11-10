@@ -952,6 +952,7 @@ body{
 			}
 		}
 		.name{
+			.ellipsis();
 			line-height: 40px;
 			color:@color_title;
 			float: left;
@@ -1134,6 +1135,11 @@ body{
 
 		//奖杯 1 2 3
 		&:nth-child(1),&:nth-child(2),&:nth-child(3){
+			font-family: "iconfont" !important;
+			font-style: normal;
+			-webkit-font-smoothing: antialiased;
+			-webkit-text-stroke-width: .2px;
+			-moz-osx-font-smoothing: grayscale;
 			.size(33%,100px);
 			border-bottom: none;
 			position: relative;
