@@ -24,3 +24,39 @@ if (mainh>100) {
 }else{
 	diss.find(".dropdownicon").hide()
 }
+
+
+
+function answerlisthide(){
+	var listheightarr=[];
+	$(".answerlist").find(".answerinfo").each(function(){
+		listheightarr.push($(this).height())
+	})
+	this.listheight=listheightarr;
+
+}
+answerlisthide.prototype ={
+	init:function(){
+		var listheight=this.listheight
+		for (var i = 0;i<listheight.length;i++){
+			if(listheight[i]<=100){
+				$(".answerlist:eq("+i+")").find(".bottombar").hide()
+			}else{
+				var heightnum=listheight[i]+32
+				$(".answerlist:eq("+i+")").bind("tap",function(){
+					if(!$(this).attr("style")){
+						console.log(heightnum)
+
+						$(this).css({"max-height":heightnum});
+						$(this).find(".dropdownicon").css({"transform":"rotate(90deg)"})
+					}else{
+						$(this).attr("style","");
+						$(this).find(".dropdownicon").css({"transform":"rotate(-90deg)"})
+					}
+				})
+			}
+		}
+	}
+}
+var answerlis=new answerlisthide()
+answerlis.init()

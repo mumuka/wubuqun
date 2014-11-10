@@ -12,6 +12,7 @@ body{
 	overflow-y:auto; 
 	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
 	background-color: #fff;
+	text-align: center;
 	.transition(0.5s ease-out);
 	.checkinput{
 		position: absolute;
@@ -35,7 +36,7 @@ body{
 		.title{
 			.size(100%,35px);
 			.ellipsis();
-			}
+		}
 		.checkmark{
 			display: none;
 			position: absolute;
@@ -367,8 +368,11 @@ body{
 .answerlistbox{
 	padding: 0px;
 	.answerlist{
+		.transition(0.5s ease-out);
 		min-height: 70px;
 		padding: 10px;
+		max-height: 132px;
+		overflow:hidden; 
 		border-bottom:1px solid @gary_c;
 		position: relative;
 		&:first-child{
