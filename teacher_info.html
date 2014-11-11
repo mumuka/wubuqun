@@ -150,27 +150,61 @@
 		<textarea class="discusstitleinfo" placeholder="请输入您要咨询的内容"  name="" id="" rows="2"></textarea>
 		<textarea class="secondtextarea" placeholder="详细描述" name="" id=""></textarea>
 		<div class="discuss_tagbox">
-			<input class="checkbox" type="checkbox" id="discusstag1">
-			<label for="discusstag1" class="discusstag">
-				<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
-			</label>
-			<input class="checkbox" type="checkbox" id="discusstag2">
-			<label for="discusstag2" class="discusstag">
-				<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
-			</label>
-			<input class="checkbox" type="checkbox" id="discusstag3">
-			<label for="discusstag3" class="discusstag">
-				<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
-			</label>
-			<input class="checkbox" type="checkbox" id="discusstag4">
-			<label for="discusstag4" class="discusstag">
-				<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
-			</label>
+			<div class="discuss_inbox">
+				<input class="checkbox" type="checkbox" id="discusstag1">
+				<label for="discusstag1" class="discusstag">
+					<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
+				</label>
+				<input class="checkbox" type="checkbox" id="discusstag2">
+				<label for="discusstag2" class="discusstag">
+					<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
+				</label>
+				<input class="checkbox" type="checkbox" id="discusstag3">
+				<label for="discusstag3" class="discusstag">
+					<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
+				</label>
+				<input class="checkbox" type="checkbox" id="discusstag4">
+				<label for="discusstag4" class="discusstag">
+					<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
+				</label>
+				<input class="checkbox" type="checkbox" id="discusstag5">
+				<label for="discusstag5" class="discusstag">
+					<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
+				</label>
+				<input class="checkbox" type="checkbox" id="discusstag6">
+				<label for="discusstag6" class="discusstag">
+					<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
+				</label>
+				<input class="checkbox" type="checkbox" id="discusstag7">
+				<label for="discusstag7" class="discusstag">
+					<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
+				</label>
+				<input class="checkbox" type="checkbox" id="discusstag8">
+				<label for="discusstag8" class="discusstag">
+					<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
+				</label>
+				<input class="checkbox" type="checkbox" id="discusstag9">
+				<label for="discusstag9" class="discusstag">
+					<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
+				</label>
+				<input class="checkbox" type="checkbox" id="discusstag10">
+				<label for="discusstag10" class="discusstag">
+					<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
+				</label>
+				<input class="checkbox" type="checkbox" id="discusstag11">
+				<label for="discusstag11" class="discusstag">
+					<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
+				</label>
+				<input class="checkbox" type="checkbox" id="discusstag12">
+				<label for="discusstag12" class="discusstag">
+					<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>标签1
+				</label>
+			</div>
 		</div>
 		<div class="discuss_contral">
 			<input class="checkbox" type="checkbox" id="discusstag5">
 			<label for="discusstag5" class="discusstag">
-				<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>此话题不公开
+				<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>公开话题
 			</label>
 			<span class="wbtn wbtn_red discuss_submit">
 				提交
@@ -214,6 +248,17 @@
 $("#cececece").click(function(){
 	$('.bs-example-modal-sm').modal('show');
 })
+
+$("#askthisteacher").bind("touchend",function(){
+	checktagwidth()
+})
+function checktagwidth(){
+	var tagwidth=0
+	$(".discuss_inbox").find(".discusstag").each(function(){
+		tagwidth+=$(this).outerWidth()
+	})
+	$(".discuss_inbox").css({"width":tagwidth})
+}
 
 </script>
 </html>

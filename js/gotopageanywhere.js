@@ -37,7 +37,7 @@ function gotopageanywhere(container,callback){
 			// console.log(lastscroll)
 		var d=lastscroll-curscroll;
 		if(Math.abs(d)>1){
-			curscroll+=d/12;
+			curscroll+=d>0?Math.ceil(d/12):Math.floor(d/12);
 			requestAnimationFrame(scroll)
 		}else{
 			curscroll=lastscroll;

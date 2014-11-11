@@ -199,6 +199,49 @@ body{
 
 }
 
+.checkbox{
+	.bb(1px,1px);
+	position: absolute;
+	top: -0px;
+	left: -100px;
+}
+label.discusstag{
+	float: left;
+	margin-left: 10px;
+	line-height: 20px;
+	height: 20px;
+	color:@gary_text;
+	.wbtn{
+		margin-right: 2px;
+		line-height: 18px;
+		border-radius: 4px;
+		.square(18px);
+		padding: 0px;
+		.iconfont{
+			&:before{
+				content:"　";
+			}
+			display: block;
+			margin:2px auto;
+			font-size: 12px;
+			line-height: 12px;
+		}
+	}
+}
+.checkbox:checked+label{
+		color:@color_main;
+	.wbtn{
+		background-color: @color_main;
+		border-color:@color_main;
+		.iconfont{
+			&:before{
+				content: "\e622";
+			}
+		}
+	}
+}//.checkbox:checked+label
+
+
 .creatdiscuss_form{
 	width: 100%;
 	textarea{
@@ -210,51 +253,11 @@ body{
 		.size(100%,36px);
 		&:extend(.fixbar);
 		padding-top: 7px;
-		overflow: hidden;
+		overflow-y: hidden;
+		overflow-x: auto;
 		bottom: 40px;
 		border-top: 1px solid #ccc;
 	}
-	.checkbox{
-		.bb(1px,1px);
-		position: absolute;
-		top: -0px;
-		left: -100px;
-	}
-	label{
-		float: left;
-		margin-left: 10px;
-		line-height: 20px;
-		height: 20px;
-		color:@gary_text;
-		.wbtn{
-			margin-right: 2px;
-			line-height: 18px;
-			border-radius: 4px;
-			.square(18px);
-			padding: 0px;
-			.iconfont{
-				&:before{
-					content:"　";
-				}
-				display: block;
-				margin:2px auto;
-				font-size: 12px;
-				line-height: 12px;
-			}
-		}
-	}
-	.checkbox:checked+label{
-			color:@color_main;
-		.wbtn{
-			background-color: @color_main;
-			border-color:@color_main;
-			.iconfont{
-				&:before{
-					content: "\e622";
-				}
-			}
-		}
-	}//.checkbox:checked+label
 	.discuss_contral{
 		.size(100%,41px);
 		border-top: 1px solid #ccc;
@@ -1281,6 +1284,10 @@ body{
 
 //职位详情
 .applyposition{
+	overflow: hidden;
+	height: 0px;
+	padding: 0 10px;
+	.transition(0.5s ease-out);
 	.input-group-addon{
 		.iconfont{
 			font-size: 20px;
@@ -1292,6 +1299,12 @@ body{
 	.infosubmitbtn{
 		.bb(100%,auto);
 		text-align: center;
+	}
+	.applybox{
+		.clearfix();
+		h4{
+			font-size: 14px;
+		}
 	}
 }
 .companyinfo{
