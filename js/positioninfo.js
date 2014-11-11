@@ -1,4 +1,5 @@
 $(".weixinsharezhidao").weixinsharebtn();
+
 $("#applythisposition").bind("touchstart",function(){
 	gotopageanywhere('#applyposition',function(){	
 		if(!$("#applyposition").attr("style")){

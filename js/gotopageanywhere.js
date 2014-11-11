@@ -27,11 +27,13 @@ function gotopageanywhere(container,callback){
 	//滚动
 	var scroll=function(){
 		var curscroll=document.body.scrollTop;
-
+		//兼容页面短，无滚动条的情况
+		var dh_wh=$(document).height()-$(window).height();
 		if(typeof container=="number"){
-			var lastscroll=container;
+			var lastscroll=container<dh_wh?container:dh_wh;
 		}else{
-			var lastscroll=$(container)[0].offsetTop;
+			var offsettop=$(container)[0].offsetTop
+			var lastscroll=offsettop<dh_wh?offsettop:dh_wh;
 		}
 
 			// console.log(lastscroll)
