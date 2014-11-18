@@ -196,3 +196,5 @@ $.fn.touchSlider = function() {
 }
 
 $("#slider").touchSlider()
+
+
