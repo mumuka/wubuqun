@@ -24,7 +24,6 @@ html结构
 		$(listbox).css({
 			"min-height": $(window).height()
 		});
-		$(".behindbar").show();
 		for (var i in arr) {
 			$(arr[i]).addClass("transitionnomal")
 		}
@@ -34,6 +33,7 @@ html结构
 		// }
 		$(this).bind("touchend", function(e) {
 			$(".sidebarhidebtn").show();
+			$(".behindbar").show();
 			for (var i in arr) {
 				$(arr[i]).addClass("sdiebartranslate")
 			}
@@ -51,6 +51,7 @@ html结构
 
 			function cc() {
 				$(arr[0])[0].removeEventListener("webkitTransitionEnd", cc)
+				$(".behindbar").hide();
 				setTimeout(function() {
 					$(window).unbind("click");
 				}, 500)
