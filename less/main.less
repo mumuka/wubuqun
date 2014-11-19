@@ -2,6 +2,7 @@ body{
 	background-color: @main-bgcolor;
 }
 
+
 //导师列表
 .filterbox{
 	padding:0 10px !important;
@@ -641,6 +642,24 @@ label.discusstag{
 		}
 	}
 }
+//大号图标
+@media all and (min-width:360px){
+	.mainnav{
+		.col-xs-4{
+			.iconfont{
+				.bb(100%,70%);
+				padding-top: 5%;
+				font-size: 50px;
+				text-align: center;
+			}
+			.text{
+				.bb(100%,30%);
+				text-align: center;
+				color: @gary_text;
+			}
+		}
+	}
+}
 
 
 .slider{
@@ -656,13 +675,17 @@ label.discusstag{
 	}
 }
 
-
 .indexlist{
 	padding-top: 0px;
 	padding-bottom: 10px;
 	.mainlist{
 		padding-left:0;
 		padding-right:0;
+		.watchmore{
+			display: block;
+			width: 100%;
+			text-align: center;
+		}
 	}
 	.tagbar{
 		.size(100%,35px);
