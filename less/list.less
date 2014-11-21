@@ -65,6 +65,24 @@
 				min-height: 42px;
 				color:@gary_text;
 			}
+			.jobtitlebox{
+				padding-right: 50px;
+				.jobtitle{
+					max-width: 30%;
+					padding: 0 5px;
+					border-left: 1px solid #ccc;
+					height: 18px;
+					display: inline-block;
+					overflow: hidden;
+					&:first-child{
+						border-left: none;
+					}
+				}
+				.company{
+					padding: 0 5px;
+				}
+			}
+
 		}//.textbox
 		.salarybox{
 			.size(30%,100%);
