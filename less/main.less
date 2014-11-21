@@ -456,10 +456,12 @@ label.discusstag{
 	}
 	.name{
 		.bb(100%,20px);
+		padding-right: 20px;
 		font-size: 14px;
 		line-height: 20px;
 		padding-left: 70px;
 		color: @color_title;
+		.ellipsis();
 		&:first-child{
 			margin-top: 12px;
 			font-size: 16px;
@@ -989,6 +991,7 @@ label.discusstag{
 			}
 		}
 		.name{
+			width: 50%;
 			.ellipsis();
 			line-height: 40px;
 			color:@color_title;
