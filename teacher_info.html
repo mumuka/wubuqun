@@ -81,6 +81,8 @@
 </div>
 
 <div class="teacherinfobox bottom50 teacherpagetag teacherpagetagshow">
+	<input type="text">
+	<span class="faccer">dadadadadad</span>
 	<div class="tagbox">
 		<span class="tagtitle">就职企业:</span>
 		<span class="wbtn_tag wbtn_yellow wbtn_bigtag">波士顿科学国际有限公司 Boston Scientific Corporation</span>
@@ -212,16 +214,16 @@
 			</div>
 		</div>
 		<div class="discuss_contral">
-			<input class="checkbox" type="checkbox" id="discusstag5">
-			<label for="discusstag5" class="discusstag">
+			<input class="checkbox" type="checkbox" id="discusstag13">
+			<label for="discusstag13" class="discusstag">
 				<span class="wbtn wbtn_gary"><span class="iconfont"></span></span>公开话题
 			</label>
-			<span class="wbtn wbtn_red discuss_submit">
+			<a href="javascript:alert(0);" class="wbtn wbtn_red discuss_submit ">
 				提交
-			</span>
-			<span class="wbtn wbtn_main discuss_exit" id="discuss_exit">
+			</a>
+			<a href="javascript:void(0);" class="wbtn wbtn_main discuss_exit" id="discuss_exit">
 				取消
-			</span>
+			</a>
 		</div>
 	</form>
 </div>
@@ -247,7 +249,7 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="js/fixbox.js?v=0.0.4"></script>
-<script src="js/teachertag.js?v=0.0.3"></script>
+<script src="js/teachertag.js?v=0.0.5"></script>
 <script>
 
 // $(".teacherpraise").bind("touchend",function(){
@@ -262,13 +264,30 @@ $("#cececece").click(function(){
 $("#askthisteacher").bind("touchend",function(){
 	checktagwidth()
 })
+
+$(".faccer").bind("click",function(){
+	alert(0)
+})
+
 function checktagwidth(){
 	var tagwidth=0
 	$(".discuss_inbox").find(".discusstag").each(function(){
-		tagwidth+=$(this).outerWidth()
+		tagwidth+=$(this).outerWidth()+12
+		// console.log($(this).outerWidth());
 	})
-	$(".discuss_inbox").css({"width":tagwidth})
+	$(".discuss_inbox").css({"width":tagwidth,"height":27})
 }
 
 </script>
+<style>
+.faccer{
+ position: fixed;
+ background-color: #f00;
+ bottom:0px;
+ left: 0px;
+ z-index: 99999;
+ width: 200px;
+ height: 100px;
+}
+</style>
 </html>
