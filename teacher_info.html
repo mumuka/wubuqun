@@ -248,7 +248,7 @@
 <script src="js/jquery.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="js/fixbox.js?v=0.0.4"></script>
+<script src="js/fixbox.js?v=0.0.5"></script>
 <script src="js/teachertag.js?v=0.0.5"></script>
 <script>
 
@@ -265,9 +265,9 @@ $("#askthisteacher").bind("touchend",function(){
 	checktagwidth()
 })
 
-$(".faccer").bind("click",function(){
-	alert(0)
-})
+// $(".faccer").bind("click",function(){
+// 	alert(0)
+// })
 
 function checktagwidth(){
 	var tagwidth=0
@@ -277,6 +277,7 @@ function checktagwidth(){
 	})
 	$(".discuss_inbox").css({"width":tagwidth,"height":27})
 }
+
 
 </script>
 <style>
