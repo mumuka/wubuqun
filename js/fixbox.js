@@ -21,6 +21,6 @@ $.fn.showfixbox = function (button,inputfocus) {
 			$(".fixbox")[0].removeEventListener("webkitTransitionEnd",closethis,false);
 			$(".fixbox").addClass("closethis");
 		}
-	})
+	}) 
 };
 })(jQuery); 

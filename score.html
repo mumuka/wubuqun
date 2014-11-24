@@ -8,6 +8,7 @@
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="css/wubu.css?v=0.0.4">
 	<script data-main="js/score" src="js/require.js"></script>
+
 </head>
 <body class="whitebg">
 <div class="scorebox">
@@ -241,9 +242,18 @@
 	</div><!-- /.col-lg-10 -->
 </div><!-- footerbar -->
 </body>
-<script>
-requirejs(["jquery"], function($) {
 
+<script>
+requirejs.config({
+    shim: {
+        'bottomload': ['jquery'],
+    }
+});
+requirejs(["jquery","bottomload"], function($) {
+
+	$(".scorelist").bottomLoad(180,function(){
+		console.log(0)
+	})
 
 
 });
