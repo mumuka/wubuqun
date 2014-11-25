@@ -69,20 +69,23 @@
 				color:@gary_text;
 			}
 			.jobtitlebox{
-				padding-right: 50px;
+				padding-right: 70px;
 				.jobtitle{
-					max-width: 30%;
+					max-width: 33%;
+					height: 21px;
+					line-height: 21px;
 					padding: 0 5px;
 					border-left: 1px solid #ccc;
-					height: 18px;
-					display: inline-block;
+					float: left;
 					overflow: hidden;
 					&:first-child{
 						border-left: none;
 					}
 				}
 				.company{
+					float: left;
 					padding: 0 5px;
+					width: 100%;
 				}
 			}
 
@@ -103,9 +106,15 @@
 		.tagbox{
 			.size(100%,16px);
 			.clearfix();
-			// background-color: #ccc;
 			margin-top: 6px;
 			padding-right: 80px;
+			overflow: hidden;
+		}
+		.smalltagbox{
+			.size(100%,16px);
+			.clearfix();
+			margin-top: 6px;
+			padding-right: 110px;
 			overflow: hidden;
 		}
 		.consult{
@@ -126,12 +135,14 @@
 		}
 		.companylogo{
 			padding: 0px;
-			.size(80px,28px);
+			.size(80px,40px);
 			text-align: right;
 			overflow: hidden;
+			top: 23px;
+			right: 10px;
 			img{
-				border-top-right-radius: 5px;
-				.size(auto,28px);
+				// border-radius: 5px;
+				.size(auto,40px);
 			}
 		}
 	}

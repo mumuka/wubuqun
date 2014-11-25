@@ -2,6 +2,10 @@ body{
 	background-color: @main-bgcolor;
 }
 
+.modal-dialog{
+	top: 100px;
+}
+
 
 //导师列表
 
@@ -370,6 +374,7 @@ label.discusstag{
 }
 
 .praisebox{
+	position: relative;
 	text-align: center;
 	.wbtn{
 		margin: 0 5px;
@@ -377,10 +382,30 @@ label.discusstag{
 		font-weight: bold;
 		width: 30%;
 		text-align: right;
+		float: right;
 		.iconfont{
 			float: left;
 			font-weight: normal;
 		}
+	}
+	.discussauthor{
+		float: left;
+		.square(40px);
+		img{
+			.square(40px);
+		}
+	}
+	.authorname{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		.size(100%,60px);
+		line-height: 60px; 
+		text-align: left;
+		padding: 0 110px 0 60px;
+		.ellipsis();
+		color:@color_title;
+		z-index: -1;
 	}
 }
 
@@ -1389,13 +1414,13 @@ label.discusstag{
 	.companylogo{
 		overflow: hidden;
 		position: absolute;
-		border:2px solid @gary_bg;
-		top: 15px;
+		// border:2px solid @gary_bg;
+		top: 8px;
 		right: 10px;
 		text-align: center;
-		.size(120px,47px);
+		.size(120px,60px);
 		img{
-			.size(120px,auto)
+			.size(120px,auto);
 		}
 	}
 }
@@ -1423,7 +1448,7 @@ label.discusstag{
 		font-size: 14px;
 		padding-left: 100px;
 		line-height: 20px;
-		max-height: 40px;
+		height: 40px;
 		overflow: hidden;
 	}
 

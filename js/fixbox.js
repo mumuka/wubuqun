@@ -14,13 +14,13 @@ $.fn.showfixbox = function (button,inputfocus) {
 	});
 
 	$(button).bind("touchend",function(e){
-		// e.preventDefault()
+		e.preventDefault()
 		$(".fixbox").css({"transform":"translate3d(0px,-10%,0px)","opacity":"0"});
 		$(".fixbox")[0].addEventListener("webkitTransitionEnd",closethis,false);
 		function closethis(){
 			$(".fixbox")[0].removeEventListener("webkitTransitionEnd",closethis,false);
 			$(".fixbox").addClass("closethis");
 		}
-	})
+	}) 
 };
 })(jQuery); 
