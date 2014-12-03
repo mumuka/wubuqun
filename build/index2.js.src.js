@@ -27,5 +27,5 @@ define(["wubuslider"],function() {
 	})
 
 
-	$("#slider").touchSlider()
+	$("#slider").touchSlider({circulate:true})
 })
