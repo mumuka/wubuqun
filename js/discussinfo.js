@@ -58,5 +58,5 @@ answerlisthide.prototype ={
 		}
 	}
 }
-// var answerlis=new answerlisthide()
-// answerlis.init()
+var answerlis=new answerlisthide()
+answerlis.init()

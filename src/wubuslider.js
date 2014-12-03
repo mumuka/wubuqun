@@ -1,10 +1,40 @@
-;(function($) {
-	$.fn.touchSlider = function() {
+;
+(function($) {
+	$.fn.touchSlider = function(arguments) {
+		var picarr = $(this).children()
+		if (picarr.size() == 1) return;
+
+		var circulate = false;//循环
+		var automatic = false;//自动播放
+		var timeinterval=3000;//播放间隔时间
+		if (typeof arguments !== "undefined") {
+			if(typeof arguments.circulate =="boolean"){
+				circulate=arguments.circulate;
+			}
+			if(typeof arguments.automatic =="boolean"){
+				automatic=arguments.automatic;
+			}
+			if(typeof arguments.timeinterval =="number"){
+				timeinterval=arguments.timeinterval;
+			}
+		}
+
+		//循环播放
+		if(circulate){
+			var firstpicarr=$(picarr[0])
+			var lastpicarr=$(picarr[picarr.length-1])
+
+			lastpicarr.after(firstpicarr.clone())
+			firstpicarr.before(lastpicarr.clone())
+
+			// $(circulate[picarr.length]).clone().appendTo($(this));
+			console.log(picarr)
+			picarr = $(this).children()
+		}
+
+		var ssize = picarr.size()
 		var swidth = $(this).width()
 		var sheight = $(this).height()
-		var picarr = $(this).children()
-		var ssize = picarr.size()
-			// if(ssize == 1) return;
 			//touch数据
 		var position = {
 				index: 0,
