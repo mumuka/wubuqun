@@ -1,7 +1,1 @@
-
-define(["jquery"],function($) {
-
-
-
-
-});
+define(["jquery"],function(e){});

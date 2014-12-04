@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 			compile: {
 				options: {
 					baseUrl: "src",
-					dir: "build",
+					dir: "js",
 					//默认：false 每次更新全部文件
 					// keepBuildDir: false,
 					//默认：false 压缩全部文件, true 压缩主文件
