@@ -3,6 +3,11 @@
 	$.fn.touchSlider = function(arguments) {
 		var picarr = $(this).children()
 		if (picarr.size() == 1) return;
+		if(picarr.size()==2){
+			$(this).append(picarr.clone())
+			picarr = $(this).children()
+			var therejusttwopic=true
+		}
 		//默认配置
 		var args = {
 				circulate: false, //循环
@@ -76,14 +81,21 @@
 			//小点
 		if (args.sliderpoint) {
 			$(this).append($("<ul class='pointlist'><li class='currentsliderpoint'></li></ul>"))
-			for (var i = 1; i < ssize; i++) {
-				$(".pointlist").append($("<li></li>"))
-			};
+			//只有2个图片兼容
 			var pointmargin = Math.ceil(args.sliderpointwidth / 5)
 			var pointlistw = pointmargin * 2 + args.sliderpointwidth
+			var pointlistwidth=pointlistw * ssize
+			if(typeof therejusttwopic==="undefined"){
+				for (var i = 1; i < ssize; i++) {
+					$(".pointlist").append($("<li></li>"))
+				}
+			}else{
+				var pointlistwidth=pointlistw * 2
+				$(".pointlist").append($("<li></li>"))
+			}
 			var pointlistli = $(this).find(".pointlist").find("li")
 			$(this).find(".pointlist").css({
-				"width": pointlistw * ssize,
+				"width": pointlistwidth,
 				"height": pointlistw,
 				"position": "absolute",
 				"transform": "translate3d(0," + (sheight / 2 - args.sliderpointwidth) + "px,1px)",
@@ -180,13 +192,22 @@
 					"transition": time + "s ease-out"
 				})
 			}
+
 			if (time != 0 && args.sliderpoint && position.direction != 0) {
 				$(".currentsliderpoint").css({
 					"background-color": args.sliderpointbgcolor
 				}).removeClass("currentsliderpoint")
-				$(pointlistli[position.index]).addClass("currentsliderpoint").css({
-					"background-color": args.sliderpointcolor
-				})
+
+				//只有2个图片兼容
+				if(typeof therejusttwopic==="undefined"){
+					$(pointlistli[position.index]).addClass("currentsliderpoint").css({
+						"background-color": args.sliderpointcolor
+					})
+				}else{
+					$(pointlistli[(position.index>1)?(position.index-2):position.index]).addClass("currentsliderpoint").css({
+						"background-color": args.sliderpointcolor
+					})
+				}
 			}
 		}
 
@@ -272,7 +293,7 @@
 
 			//点击链接跳转
 			if (dtime < 250 && Math.abs(dx) < 8 && Math.abs(dy) < 8) {
-				window.location.href = $(".sliderbox").find("a:eq(" + position.index + ")").attr("href");
+				window.location.href = $(picarr[position.index]).attr("href");
 				return
 			}
 			position.init()
