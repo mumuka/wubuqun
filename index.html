@@ -8,9 +8,6 @@
 	<title>五步会首页</title>
 	<link rel="stylesheet" href="css/wubu.css?v=0.8">
 	<script data-main="build/indexmain" src="build/require.js"></script>
-	<script>
-		require.config({ urlArgs: "v=" + (new Date()).getTime() });
-	</script>
 </head>
 <body >
 
@@ -47,7 +44,6 @@
 
 <div class="wcontainer">
 	<div class="slider" id="slider">
-		<!-- <div class="sliderbox"> -->
 			<a href="http://www.baidu.com" class="sliderlist">
 				<img src="http://dev.comeoncloud.net/test/lib/pic/sliderpic1.jpg" alt="">
 			</a>
@@ -60,7 +56,6 @@
 			<a href="http://www.baidu.com" class="sliderlist">
 				<img src="http://dev.comeoncloud.net/test/lib/pic/sliderpic4.jpg" alt="">
 			</a>
-<!-- 		</div> -->
 	</div>
 </div>
 
@@ -327,12 +322,17 @@
 		</a>
 	</div><!-- /.col-lg-3 -->
 </div><!-- footerbar -->
-
-
 </body>
+<script>
+require.config({
+	shim: {
+		'bootstrap': ['jquery'],
+	},
+	urlArgs: "v=1.0.0.1"
+})
+require(["bootstrap"],function() {
 
-<!-- 	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<script src="js/wubuslider.js"></script>
-	<script src="js/index.js?v=30"></script> -->
+
+})
+</script>
 </html>

@@ -5,9 +5,10 @@ require.config({
 		"wubuslider":['jquery']
 	},
 	paths: {
-		"jquery": "jquery",
-		"wubuslider": "wubuslider",
-		"scrollpage": "scrollpage"
+		"jquery": "../js/jquery",
+		"bootstrap": "../js/bootstrap",
+		"wubuslider": "../build/wubuslider",
+		// "scrollpage": "scrollpage"
 	}
 })
 require(["index2"])

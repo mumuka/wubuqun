@@ -27,5 +27,12 @@ define(["wubuslider"],function() {
 	})
 
 
-	$("#slider").touchSlider({circulate:true})
+	$("#slider").touchSlider({
+		animatetime:300,
+		automatic:true,
+		timeinterval:4000,
+		sliderpoint:true,
+		sliderpointwidth:8,
+		sliderpointcolor: "#4fa2ff",
+	})
 })

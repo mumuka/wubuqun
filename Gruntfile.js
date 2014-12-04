@@ -11,9 +11,10 @@ module.exports = function(grunt) {
 					// keepBuildDir: false,
 					//默认：false 压缩全部文件, true 压缩主文件
 					// skipDirOptimize: true,
-					optimize: 'uglify2',
-					generateSourceMaps: true,
-					preserveLicenseComments: false,
+					optimize: 'uglify',
+					// optimize: 'uglify2',
+					// generateSourceMaps: true,
+					// preserveLicenseComments: false,
 					modules: [
 						{
 							name: "indexmain",
