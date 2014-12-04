@@ -1,13 +1,14 @@
 require.config({
-	baseUrl: "src",
+	// baseUrl: "src",
 	shim: {
 		'bootstrap': ['jquery'],
 		"wubuslider":['jquery']
 	},
 	paths: {
 		"jquery": "jquery",
+		"bootstrap": "bootstrap",
 		"wubuslider": "wubuslider",
-		"scrollpage": "scrollpage"
+		// "scrollpage": "scrollpage"
 	}
 })
-require(["index2"])
+require(["index"])
