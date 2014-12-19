@@ -75,8 +75,8 @@ body{
 
 //导师详情
 .teacherheader{
-	// .size(100%,155px);
-	.size(100%,145px);
+	.size(100%,155px);
+	// .size(100%,145px);
 	.clearfix();
 	padding: 10px;
 	.col-xs-4{
@@ -90,7 +90,7 @@ body{
 			}
 		}
 		.teachertag{
-			.size(70%,30px);
+			.size(90%,30px);
 			text-align: right;
 			line-height: 30px;
 			padding: 0 5px;
@@ -117,6 +117,20 @@ body{
 				line-height: 40px;
 			}
 		}
+		.followteacher{
+			margin-top: 30px;
+			.size(100px,40px);
+			text-align: center;
+			padding: 0px;
+			line-height: 40px;
+			.iconfont{
+				font-size: 20px;
+				display: inline-block;
+				height: 40px;
+				line-height: 40px;
+			}
+		}
+
 
 	}
 	.teachername{
@@ -125,9 +139,13 @@ body{
 		font-size: 20px;
 		color:@color_main;
 		text-align: center;
-		// line-height: 25px;
-		line-height: 40px;
+		line-height: 25px;
+		// line-height: 40px;
 		font-weight: bold;
+		.icon-zuanshi{
+			font-size: 18px;
+			color:@color_yellow;
+		}
 	}
 }
 
@@ -894,6 +912,7 @@ label.discusstag{
 	position: relative;
 	background-color: @color_red;
 	text-align: center;
+	padding-top: 1px;
 	.numbox{
 		color: #fff;
 		padding-top: 30px;
@@ -922,7 +941,50 @@ label.discusstag{
 		font-size: 16px;
 		padding: 10px;
 	}
+
+	.scorebar{
+		display: block;
+		width: 90%;
+		height: 14px;
+		border-radius: 14px;
+		margin: 0 auto 0 auto;
+		transform:translateY(600%);
+		padding: 2px;
+		background-color: #cb6351;
+		box-shadow: inset 1px 1px 3px rgba(0,0,0,0.3);
+		position: relative;
+		.currentscorebar{
+			height: 10px;
+			border-radius: 10px;
+			display: block;
+			background-color: @color_yellow;
+		}
+		.nextlevel{
+			position: absolute;
+			bottom: -55px;
+			right: 0px;
+			.scorenum{
+				display: block;
+				text-align: right;
+				font-size: 20px;
+				color:#fff;
+			}
+			.level{
+				display: block;
+				color:@color_yellow;
+			}
+		}
+		.currentscorenum{
+			position: absolute;
+			left: 0px;
+			top: -30px;
+			font-size: 20px;
+			color:#fff;
+			text-align: right;
+		}
+	}
 }
+
 
 .earnscore{
 	// border-bottom: 1px solid @gary_c;
