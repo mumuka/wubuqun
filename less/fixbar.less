@@ -58,7 +58,7 @@
 	width: 100%;
 	position: fixed;
 	top: 50px;
-	z-index: 2;
+	z-index: 3;
 	background-color: @gary_bar;
 	&:extend(.boxshadow);
 	>div{
@@ -98,6 +98,7 @@
 	.col-xs-3{
 		padding: 0px;
 		text-align: center;
+		position: relative;
 		.wbtn{
 			.bb(100%;50px);
 			.navtext{
@@ -107,6 +108,14 @@
 				line-height: 15px;
 				.bb(100%;20px);
 			}
+		}
+		.redpoint{
+			.square(10px);
+			border-radius: 10px;
+			background-color: @color_red;
+			position: absolute;
+			top: 10px;
+			right: 35%;
 		}
 	}
 	.col-xs-2{
