@@ -13,19 +13,27 @@ define(["wubuslider"],function() {
 
 	$("#newslistbtn").click(function() {
 		if ($("#newslistbtn").hasClass("wbtn_greenyellow")) return;
-		$("#discusslistbtn").removeClass("wbtn_yellow");
-		$("#newslistbtn").addClass("wbtn_greenyellow");
-		$(".discusslist").hide();
-		$(".articlelist").show();
+		inittagbar()
+		$("#newslistbtn").addClass("wbtn_greenyellow")
+		$(".articlelist").show()
 	})
 	$("#discusslistbtn").click(function() {
 		if ($("#discusslistbtn").hasClass("wbtn_yellow")) return;
-		$("#newslistbtn").removeClass("wbtn_greenyellow");
-		$("#discusslistbtn").addClass("wbtn_yellow");
-		$(".articlelist").hide();
-		$(".discusslist").show();
+		inittagbar()
+		$("#discusslistbtn").addClass("wbtn_yellow")
+		$(".discusslist").show()
 	})
+	$("#followarticlebtn").click(function() {
+		if ($("#followarticlebtn").hasClass("wbtn_yellow")) return;
+		inittagbar()
+		$("#followarticlebtn").addClass("wbtn_yellow")
+		$(".followarticlelist").show()
 
+	})
+	function inittagbar(){
+		$(".tagbar .wbtn").removeClass("wbtn_greenyellow").removeClass("wbtn_yellow")
+		$(".mainlist").hide()
+	}
 
 	$("#slider").touchSlider({
 		animatetime:300,
