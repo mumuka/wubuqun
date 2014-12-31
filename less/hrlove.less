@@ -45,6 +45,48 @@
 	}
 }
 
+.hrlovemainlist{
+	.listbox{
+		.touxiang{
+			position: relative;
+			.picshade{
+				position: absolute;
+				.square(100%);
+				top: 0px;
+				left: 0px;
+				fill:#fff;
+
+			}
+		}
+		.textbox{
+			.hrlovelisttitle{
+				line-height: 35px;
+				max-height: 35px;
+				height: 35px;
+				.iconfont{
+					color:@color_redpurple;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .lovelinkbox{
 	.col-xs-3{
 		padding: 0px;
@@ -94,6 +136,201 @@
 			top: 0px;
 			left: 0px;
 			fill:#eee;
+		}
+	}
+}
+.hrlovelist{
+	@vwidth:32px;
+	@vmargin:2px;
+	@voutwidth:@vwidth+2*@vmargin;
+	@topheight:60px;
+	@centermargin:12px;
+	width: @voutwidth*8+@centermargin;
+	margin: 0 auto;
+	background-image: url(../images/hrlovelogo.png);
+	background-repeat: no-repeat;
+	background-size: @voutwidth*2+@centermargin;
+	background-position: center @voutwidth*2+@topheight;
+	.hrloveavatar{
+		.square(@vwidth);
+		display: block;
+		margin: @vmargin;
+		float: left;
+		img{
+			.square(inherit)
+		}
+		&:nth-child(1){
+			margin-left: @voutwidth+@vmargin;
+		}
+		&:nth-child(3),&:nth-child(16),&:nth-child(22){
+			margin-left: @voutwidth*2+@vmargin+@centermargin;
+		}
+		&:nth-child(5),&:nth-child(13),&:nth-child(19),&:nth-child(25),&:nth-child(32),&:nth-child(37),&:nth-child(40){
+			clear:both;
+		}
+		&:nth-child(9){
+			margin-left: @vmargin+@centermargin;
+		}
+		&:nth-child(25){
+			margin-left: @voutwidth*0.5+@vmargin;
+		}
+		&:nth-child(32){
+			margin-left: @voutwidth*1.5+@vmargin;
+		}
+		&:nth-child(37){
+			margin-left: @voutwidth*2.5+@vmargin;
+		}
+		&:nth-child(40){
+			margin-left: @voutwidth*3.5+@vmargin;
+		}
+	}
+}
+
+@media all and (min-width:360px){
+
+	.hrlovelist{
+		@vwidth:35px;
+		@vmargin:3px;
+		@voutwidth:@vwidth+2*@vmargin;
+		@topheight:60px;
+		@centermargin:12px;
+		width: @voutwidth*8+@centermargin;
+		margin: 0 auto;
+		background-image: url(../images/hrlovelogo.png);
+		background-repeat: no-repeat;
+		background-size: @voutwidth*2+@centermargin;
+		background-position: center @voutwidth*2+@topheight;
+		.hrloveavatar{
+			.square(@vwidth);
+			display: block;
+			margin: @vmargin;
+			float: left;
+			img{
+				.square(inherit)
+			}
+			&:nth-child(1){
+				margin-left: @voutwidth+@vmargin;
+			}
+			&:nth-child(3),&:nth-child(16),&:nth-child(22){
+				margin-left: @voutwidth*2+@vmargin+@centermargin;
+			}
+			&:nth-child(5),&:nth-child(13),&:nth-child(19),&:nth-child(25),&:nth-child(32),&:nth-child(37),&:nth-child(40){
+				clear:both;
+			}
+			&:nth-child(9){
+				margin-left: @vmargin+@centermargin;
+			}
+			&:nth-child(25){
+				margin-left: @voutwidth*0.5+@vmargin;
+			}
+			&:nth-child(32){
+				margin-left: @voutwidth*1.5+@vmargin;
+			}
+			&:nth-child(37){
+				margin-left: @voutwidth*2.5+@vmargin;
+			}
+			&:nth-child(40){
+				margin-left: @voutwidth*3.5+@vmargin;
+			}
+		}
+	}
+}
+@media all and (min-width:375px){
+
+	.hrlovelist{
+		@vwidth:38px;
+		@vmargin:3px;
+		@voutwidth:@vwidth+2*@vmargin;
+		@topheight:60px;
+		@centermargin:12px;
+		width: @voutwidth*8+@centermargin;
+		margin: 0 auto;
+		background-image: url(../images/hrlovelogo.png);
+		background-repeat: no-repeat;
+		background-size: @voutwidth*2+@centermargin;
+		background-position: center @voutwidth*2+@topheight;
+		.hrloveavatar{
+			.square(@vwidth);
+			display: block;
+			margin: @vmargin;
+			float: left;
+			img{
+				.square(inherit)
+			}
+			&:nth-child(1){
+				margin-left: @voutwidth+@vmargin;
+			}
+			&:nth-child(3),&:nth-child(16),&:nth-child(22){
+				margin-left: @voutwidth*2+@vmargin+@centermargin;
+			}
+			&:nth-child(5),&:nth-child(13),&:nth-child(19),&:nth-child(25),&:nth-child(32),&:nth-child(37),&:nth-child(40){
+				clear:both;
+			}
+			&:nth-child(9){
+				margin-left: @vmargin+@centermargin;
+			}
+			&:nth-child(25){
+				margin-left: @voutwidth*0.5+@vmargin;
+			}
+			&:nth-child(32){
+				margin-left: @voutwidth*1.5+@vmargin;
+			}
+			&:nth-child(37){
+				margin-left: @voutwidth*2.5+@vmargin;
+			}
+			&:nth-child(40){
+				margin-left: @voutwidth*3.5+@vmargin;
+			}
+		}
+	}
+}
+
+@media all and (min-width:414px){
+
+	.hrlovelist{
+		@vwidth:40px;
+		@vmargin:4px;
+		@voutwidth:@vwidth+2*@vmargin;
+		@topheight:60px;
+		@centermargin:12px;
+		width: @voutwidth*8+@centermargin;
+		margin: 0 auto;
+		background-image: url(../images/hrlovelogo.png);
+		background-repeat: no-repeat;
+		background-size: @voutwidth*2+@centermargin;
+		background-position: center @voutwidth*2+@topheight;
+		.hrloveavatar{
+			.square(@vwidth);
+			display: block;
+			margin: @vmargin;
+			float: left;
+			img{
+				.square(inherit)
+			}
+			&:nth-child(1){
+				margin-left: @voutwidth+@vmargin;
+			}
+			&:nth-child(3),&:nth-child(16),&:nth-child(22){
+				margin-left: @voutwidth*2+@vmargin+@centermargin;
+			}
+			&:nth-child(5),&:nth-child(13),&:nth-child(19),&:nth-child(25),&:nth-child(32),&:nth-child(37),&:nth-child(40){
+				clear:both;
+			}
+			&:nth-child(9){
+				margin-left: @vmargin+@centermargin;
+			}
+			&:nth-child(25){
+				margin-left: @voutwidth*0.5+@vmargin;
+			}
+			&:nth-child(32){
+				margin-left: @voutwidth*1.5+@vmargin;
+			}
+			&:nth-child(37){
+				margin-left: @voutwidth*2.5+@vmargin;
+			}
+			&:nth-child(40){
+				margin-left: @voutwidth*3.5+@vmargin;
+			}
 		}
 	}
 }
