@@ -22,22 +22,42 @@
 			}
 		}
 	}
+	.listoutbox{
+		.size(100%,auto);
+		position: relative;
+		overflow-x: hidden;
+		.deletethis{
+			position: absolute;
+			top: 0;
+			left:0;
+			height: 100%;
+			width: 30%;
+			z-index:1;
+			text-align: center;
+			padding-top: 8%;
+		}
+	}
 	.listbox{
 		background-color: #fff;
 		margin-bottom: 10px;
 		padding: 6px 10px;
 		border-radius: 5px;
 		position: relative;
+		z-index: 2;
 		.clearfix();
 		.bb(100%,auto);
 		&:extend(.boxshadow);
 		.touxiang{
 			float: left;
-			background-color: #ccc;
+			// background-color: #ccc;
 			margin-top: 3px;
 			.square(60px);
 			margin-right: 10px;
 			img{width: 100%;}
+			.iconfont{
+				line-height: 56px;
+				font-size: 30px;
+			}
 		}
 		.textbox{
 			h3{
