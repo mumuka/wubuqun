@@ -69,6 +69,10 @@
 			<span class="iconfont icon-34"></span>
 			<span class="title">最新话题</span>
 		</span>
+		<span class="wbtn"  id="followarticlebtn">
+			<span class="iconfont icon-78"></span>
+			<span class="title">关注圈</span>
+		</span>
 	</div>
 	<div class="mainlist bottom50 discusslist">
 		<a href="#" class="listbox">
@@ -291,6 +295,47 @@
 			</a>
 		</span>
 	</div><!-- mainlist -->
+
+
+
+
+	<div class="mainlist bottom50 followarticlelist">
+		<a href="#" class="listbox">
+			<div class="textbox">
+				<h3>话题标题标题标题标题标题标题标题标题</h3>
+				<p>话题描述话题描述话题描述话题描述话题描述话题描述话题描述话题描述话题描述话题描述话题描述话题描述话题描述话题描述</p>
+			</div>
+			<div class="tagbox">
+				<span class="wbtn_tag wbtn_red">
+					<span class="iconfont icon-eye"></span>122
+				</span>
+				<span class="wbtn_tag wbtn_main">分类</span>
+			</div>
+			<div class="wbtn_fly wbtn_flybr wbtn_greenyellow timetag">
+				2014/10/09
+			</div>
+		</a><!-- listbox -->
+		<a href="#" class="listbox">
+			<div class="textbox">
+				<h3>话题标题标题标题标题标题标题标题标题</h3>
+				<p>话题描述话题描述话题描述话题描述话题描述话题描述话题描述话题描述话题描述话题描述话题描述话题描述话题描述话题描述</p>
+			</div>
+			<div class="tagbox">
+				<span class="wbtn_tag wbtn_red">
+					<span class="iconfont icon-eye"></span>122
+				</span>
+				<span class="wbtn_tag wbtn_main">分类</span>
+			</div>
+			<div class="wbtn_fly wbtn_flybr wbtn_greenyellow timetag">
+				2014/10/09
+			</div>
+		</a><!-- listbox -->
+		<span class="watchmore">
+			<a href="#" class="wbtn wbtn_greenyellow">
+				<span class="title">查看更多</span>
+			</a>
+		</span>
+	</div><!-- mainlist -->
 </div>
 
 
@@ -328,7 +373,8 @@ require.config({
 	shim: {
 		'bootstrap': ['jquery'],
 	},
-	urlArgs: "v=1.0.0.1"
+	// urlArgs: "v=1.0.0.3"
+	urlArgs: "v=" + (new Date()).getTime()
 })
 require(["bootstrap"],function() {
 

@@ -45,7 +45,7 @@ answerlisthide.prototype ={
 				var heightnum=listheight[i]+32
 				$(".answerlist:eq("+i+")").bind("tap",function(){
 					if(!$(this).attr("style")){
-						console.log(heightnum)
+						// console.log(heightnum)
 
 						$(this).css({"max-height":heightnum});
 						$(this).find(".dropdownicon").css({"transform":"rotate(90deg)"})
